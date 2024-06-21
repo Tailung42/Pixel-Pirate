@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ts3kshnreysk"]
+
+[ext_resource type="PackedScene" uid="uid://daye7bbgvjkpb" path="res://scenes/player.tscn" id="1_hsl5k"]
+[ext_resource type="Texture2D" uid="uid://bqbdspmlbd4vp" path="res://assets/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 01.png" id="2_7qd4b"]
+[ext_resource type="Texture2D" uid="uid://ddgcxxqxp58wt" path="res://assets/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="3_bjpog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ceewh"]
+size = Vector2(1034, 20)
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_hsl5k")]
+position = Vector2(0, -15)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-10, 162)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(192, 0)
+shape = SubResource("RectangleShape2D_ceewh")
+
+[node name="BackPalmTreeLeft01" type="Sprite2D" parent="."]
+position = Vector2(-210, 128)
+texture = ExtResource("2_7qd4b")
+
+[node name="BackPalmTreeRegular01" type="Sprite2D" parent="."]
+position = Vector2(-96, 121)
+texture = ExtResource("3_bjpog")

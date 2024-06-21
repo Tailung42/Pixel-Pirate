@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmu6gkh8j8r0g"]
 
 [ext_resource type="Texture2D" uid="uid://dcdltlx4es35j" path="res://assets/Palm Tree Island/Sprites/Objects/Spikes.png" id="1_a2m34"]
-[ext_resource type="PackedScene" uid="uid://c213ajxst54ag" path="res://scenes/killzone.tscn" id="2_pm4a4"]
+[ext_resource type="PackedScene" uid="uid://c213ajxst54ag" path="res://levels/dangers/killzone.tscn" id="2_pm4a4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8yg"]
 size = Vector2(31.5, 16)
 
 [node name="spikes" type="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_a2m34")

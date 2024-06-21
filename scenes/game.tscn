@@ -1,31 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ts3kshnreysk"]
+[gd_scene load_steps=3 format=3 uid="uid://ts3kshnreysk"]
 
 [ext_resource type="PackedScene" uid="uid://daye7bbgvjkpb" path="res://scenes/player.tscn" id="1_hsl5k"]
-[ext_resource type="PackedScene" uid="uid://dv0fk0wq8nufl" path="res://scenes/pinetrees/bpineregular.tscn" id="3_hv06f"]
-[ext_resource type="PackedScene" uid="uid://cau83vn4mugm8" path="res://scenes/pinetrees/fpineregular.tscn" id="4_abcho"]
-[ext_resource type="PackedScene" uid="uid://cmu6gkh8j8r0g" path="res://scenes/spikes.tscn" id="4_h1epy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ceewh"]
-size = Vector2(1034, 20)
+[ext_resource type="PackedScene" uid="uid://d0srnog7riddi" path="res://scenes/levels.tscn" id="4_p3q3s"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hsl5k")]
-position = Vector2(0, -15)
+position = Vector2(20, 424)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-13, 169)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(192, 0)
-shape = SubResource("RectangleShape2D_ceewh")
-
-[node name="FPineRegular" parent="." instance=ExtResource("4_abcho")]
-position = Vector2(148, 17)
-
-[node name="Bpineregular" parent="." instance=ExtResource("3_hv06f")]
-position = Vector2(-114, 104)
-
-[node name="spikes" parent="." instance=ExtResource("4_h1epy")]
-position = Vector2(3, 141)
+[node name="levels" parent="." instance=ExtResource("4_p3q3s")]

@@ -30,6 +30,7 @@ animations = [{
 size = Vector2(24, 3)
 
 [node name="fpineregular" type="StaticBody2D"]
+z_index = 2
 position = Vector2(10, 1)
 scale = Vector2(2, 2)
 

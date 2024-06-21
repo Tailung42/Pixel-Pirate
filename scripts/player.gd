@@ -3,7 +3,7 @@ var  max_jumps = 2
 var jumps
 
 const SPEED = 150.0
-# const camera_offset_x = 200
+const camera_offset_x = 200.0
 const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -31,9 +31,9 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
-		# $Camera2D.offset.x = direction * camera_offset_x
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 		
 	# Play appropriate animations
 	if velocity.length() == 0:

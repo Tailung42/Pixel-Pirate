@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmu6gkh8j8r0g"]
+
+[ext_resource type="Texture2D" uid="uid://dcdltlx4es35j" path="res://assets/Palm Tree Island/Sprites/Objects/Spikes.png" id="1_a2m34"]
+[ext_resource type="PackedScene" uid="uid://c213ajxst54ag" path="res://scenes/killzone.tscn" id="2_pm4a4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8yg"]
+size = Vector2(31.5, 16)
+
+[node name="spikes" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a2m34")
+
+[node name="killzone" parent="." instance=ExtResource("2_pm4a4")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
+visible = false
+position = Vector2(-0.25, 8)
+shape = SubResource("RectangleShape2D_7u8yg")

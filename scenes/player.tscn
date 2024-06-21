@@ -46,7 +46,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_iap2f")
 }],
-"loop": true,
+"loop": false,
 "name": &"deadground",
 "speed": 5.0
 }, {
@@ -63,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_dpyem")
 }],
-"loop": true,
+"loop": false,
 "name": &"deadhit",
 "speed": 5.0
 }, {
@@ -71,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_arhmr")
 }],
-"loop": true,
+"loop": false,
 "name": &"fall",
 "speed": 5.0
 }, {
@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("11_tat0p")
 }],
-"loop": true,
+"loop": false,
 "name": &"ground",
 "speed": 5.0
 }, {
@@ -99,7 +99,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_005uj")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
 "speed": 5.0
 }, {
@@ -133,7 +133,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("23_ni53g")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -171,7 +171,7 @@ script = ExtResource("1_5qaq0")
 position = Vector2(33, 55)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wv1m5")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(33, 52)

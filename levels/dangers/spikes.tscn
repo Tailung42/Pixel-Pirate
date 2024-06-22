@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c213ajxst54ag" path="res://levels/dangers/killzone.tscn" id="2_pm4a4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u8yg"]
-size = Vector2(31.5, 16)
+size = Vector2(31.5, 10)
 
 [node name="spikes" type="StaticBody2D"]
 scale = Vector2(1.5, 1.5)
@@ -15,6 +15,5 @@ texture = ExtResource("1_a2m34")
 [node name="killzone" parent="." instance=ExtResource("2_pm4a4")]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
-visible = false
-position = Vector2(-0.25, 8)
+position = Vector2(-0.25, 5)
 shape = SubResource("RectangleShape2D_7u8yg")

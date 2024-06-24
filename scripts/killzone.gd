@@ -14,7 +14,6 @@ func _process(delta):
 func _on_body_entered(body:Node2D):
 	print("dead")
 	$Timer.start()
-	get_tree().paused = true	
 
 
 func _on_timer_timeout():

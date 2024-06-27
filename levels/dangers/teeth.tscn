@@ -123,13 +123,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwfyq"]
 size = Vector2(18.5, 20)
 
 [node name="Teeth" type="CharacterBody2D"]
+position = Vector2(0, -1)
 scale = Vector2(2, 2)
 collision_mask = 3
 script = ExtResource("1_qnpny")
@@ -140,9 +141,13 @@ shape = SubResource("RectangleShape2D_e4s3q")
 debug_color = Color(0, 0.627451, 0.486275, 0.690196)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-5.66244e-07, 0.25)
+scale = Vector2(1, 0.983333)
 sprite_frames = SubResource("SpriteFrames_mnv4e")
-animation = &"idle"
+animation = &"run"
+autoplay = "run"
+frame = 5
+frame_progress = 0.912103
 
 [node name="killzone" parent="." instance=ExtResource("1_g4ial")]
 collision_mask = 3
@@ -153,12 +158,14 @@ shape = SubResource("RectangleShape2D_hwfyq")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 rotation = -0.00421864
-target_position = Vector2(-16.5, -0.5)
+target_position = Vector2(-23.9977, -0.601243)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 rotation = 0.00536153
-target_position = Vector2(17, 0)
+target_position = Vector2(24.0023, 0.371317)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 rotation = -3.13112
 target_position = Vector2(0.424136, 40.4978)
+
+[connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]

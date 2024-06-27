@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://daye7bbgvjkpb" path="res://scenes/player.tscn" id="1_hsl5k"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_jdtcb"]
-[ext_resource type="PackedScene" uid="uid://d0srnog7riddi" path="res://scenes/levels.tscn" id="4_p3q3s"]
+[ext_resource type="PackedScene" uid="uid://qhv5hdbj61f0" path="res://scenes/levels.tscn" id="4_p3q3s"]
 
 [node name="Game" type="Node2D"]
 scale = Vector2(0.837058, 1.07182)

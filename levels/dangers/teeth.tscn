@@ -98,7 +98,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_yte13")
 }],
-"loop": false,
+"loop": true,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -144,10 +144,10 @@ debug_color = Color(0, 0.627451, 0.486275, 0.690196)
 position = Vector2(0.249999, 0.25)
 scale = Vector2(0.985294, 0.983333)
 sprite_frames = SubResource("SpriteFrames_mnv4e")
-animation = &"run"
+animation = &"jump"
 autoplay = "run"
-frame = 5
-frame_progress = 0.912103
+frame = 2
+frame_progress = 1.0
 
 [node name="killzone" parent="." instance=ExtResource("1_g4ial")]
 collision_mask = 3
@@ -166,6 +166,7 @@ target_position = Vector2(17.0024, 0.408847)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 rotation = -3.13112
-target_position = Vector2(0.424136, 40.4978)
+target_position = Vector2(1.73302, 69.9857)
+collision_mask = 3
 
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]

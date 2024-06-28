@@ -186,7 +186,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.164706)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(33, 54)
 scale = Vector2(2, 2)
-offset = Vector2(200, -100)
+offset = Vector2(200, -80)
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0

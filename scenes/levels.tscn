@@ -5,4 +5,4 @@
 [node name="levels" type="Node"]
 
 [node name="level1" parent="." instance=ExtResource("1_rksnq")]
-position = Vector2(14, -27)
+position = Vector2(5, -26)

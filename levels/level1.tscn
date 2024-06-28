@@ -164,7 +164,7 @@ position = Vector2(758, 476)
 position = Vector2(934, 369)
 
 [node name="fpineregular2" parent="." instance=ExtResource("3_kothd")]
-position = Vector2(346, 390)
+position = Vector2(241.037, 376)
 
 [node name="fpineregular4" parent="." instance=ExtResource("3_kothd")]
 position = Vector2(1463, 433)
@@ -176,7 +176,7 @@ position = Vector2(864.721, 517)
 position = Vector2(950.088, 518)
 
 [node name="RedDiamond" parent="." instance=ExtResource("5_3ishn")]
-position = Vector2(211, 421)
+position = Vector2(208.899, 456)
 scale = Vector2(2.12695, 2.52327)
 
 [node name="RedDiamond2" parent="." instance=ExtResource("6_4y6ql")]
@@ -204,7 +204,7 @@ position = Vector2(761, 524)
 position = Vector2(543, 422)
 
 [node name="SilverCoin2" parent="." instance=ExtResource("7_bhxjf")]
-position = Vector2(351, 329)
+position = Vector2(393.694, 400)
 
 [node name="SmallCloud1" type="Sprite2D" parent="."]
 position = Vector2(3015, -156)

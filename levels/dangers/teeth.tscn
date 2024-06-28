@@ -146,10 +146,9 @@ scale = Vector2(0.985294, 0.983333)
 sprite_frames = SubResource("SpriteFrames_mnv4e")
 animation = &"jump"
 autoplay = "run"
-frame = 2
-frame_progress = 1.0
 
 [node name="killzone" parent="." instance=ExtResource("1_g4ial")]
+position = Vector2(1.5, 0)
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]

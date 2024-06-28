@@ -70,3 +70,7 @@ func change_direction():
 func start_running():
 	is_running = true
 	velocity.x = direction * SPEED
+
+func _on_killzone_body_entered(body:Node2D):
+	print("hello world")
+	$AnimatedSprite2D.play("attack")

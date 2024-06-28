@@ -231,4 +231,4 @@ position = Vector2(3047, -144)
 texture = ExtResource("10_dxlrc")
 
 [node name="Teeth" parent="." instance=ExtResource("12_5dvo8")]
-position = Vector2(379.634, 499)
+position = Vector2(393.694, 512)

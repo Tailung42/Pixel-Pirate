@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c213ajxst54ag" path="res://levels/dangers/killzone.tscn" id="1_g4ial"]
 [ext_resource type="Texture2D" uid="uid://6imcva0tv7iq" path="res://assets/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 01.png" id="1_ipsuy"]
 [ext_resource type="Texture2D" uid="uid://d3mxglmycxvdd" path="res://assets/The Crusty Crew/Sprites/Fierce Tooth/04-Fall/Fall 01.png" id="1_lfyx1"]
-[ext_resource type="Script" path="res://scripts/teeth.gd" id="1_qnpny"]
+[ext_resource type="Script" path="res://scripts/teeth.gd" id="1_niki5"]
 [ext_resource type="Texture2D" uid="uid://85msxunexnqk" path="res://assets/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 02.png" id="2_hcevc"]
 [ext_resource type="Texture2D" uid="uid://25xe8joam0nr" path="res://assets/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 01.png" id="2_hylm4"]
 [ext_resource type="Texture2D" uid="uid://b7ionusec6txd" path="res://assets/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 03.png" id="3_45nwh"]
@@ -127,13 +127,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwfyq"]
-size = Vector2(18.5, 20)
+size = Vector2(18.5, 18.5)
 
 [node name="Teeth" type="CharacterBody2D"]
 position = Vector2(0, -1)
 scale = Vector2(2, 2)
 collision_mask = 3
-script = ExtResource("1_qnpny")
+script = ExtResource("1_niki5")
 
 [node name="base" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 13)
@@ -141,8 +141,8 @@ shape = SubResource("RectangleShape2D_e4s3q")
 debug_color = Color(0, 0.627451, 0.486275, 0.690196)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.66244e-07, 0.25)
-scale = Vector2(1, 0.983333)
+position = Vector2(0.249999, 0.25)
+scale = Vector2(0.985294, 0.983333)
 sprite_frames = SubResource("SpriteFrames_mnv4e")
 animation = &"run"
 autoplay = "run"
@@ -153,16 +153,16 @@ frame_progress = 0.912103
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0.25, 1)
+position = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_hwfyq")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 rotation = -0.00421864
-target_position = Vector2(-23.9977, -0.601243)
+target_position = Vector2(-16.002, 0.432498)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 rotation = 0.00536153
-target_position = Vector2(24.0023, 0.371317)
+target_position = Vector2(17.0024, 0.408847)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 rotation = -3.13112

@@ -136,6 +136,7 @@ collision_mask = 3
 script = ExtResource("1_niki5")
 
 [node name="base" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(1.5, 13)
 shape = SubResource("RectangleShape2D_e4s3q")
 debug_color = Color(0, 0.627451, 0.486275, 0.690196)
@@ -147,22 +148,27 @@ sprite_frames = SubResource("SpriteFrames_mnv4e")
 animation = &"idle"
 
 [node name="killzone" parent="." instance=ExtResource("1_g4ial")]
+visible = false
 position = Vector2(1.5, 0)
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+visible = false
 position = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_hwfyq")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
+visible = false
 rotation = -0.00421864
 target_position = Vector2(-16.002, 0.432498)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
+visible = false
 rotation = 0.00536153
 target_position = Vector2(17.0024, 0.408847)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
+visible = false
 rotation = -3.13112
 target_position = Vector2(1.73302, 69.9857)
 collision_mask = 3

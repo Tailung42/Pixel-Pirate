@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #constants
-const SPEED = 100.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -420.0
 # variables
 var direction = 1

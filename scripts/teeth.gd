@@ -41,26 +41,14 @@ func _physics_process(delta):
 		$RayCastRight.enabled = true
 		start_running()
 
-		# handle appropriate animation
-	if is_on_floor():
-		if velocity.length() == 0:
-			$AnimatedSprite2D.play("idle")
-		else:   # if velocity is not 0
-			$AnimatedSprite2D.play("run")
-	else:
-		if velocity.y < 0:
-			$AnimatedSprite2D.play("jump")
-		else:
-			$AnimatedSprite2D.play("fall")
-
-
-
 	move_and_slide()
 
 
 func stop_running():
 	is_running = false
 	velocity.x = 0
+	if is_on_floor():
+		$AnimatedSprite2D.play("idle")
 
 
 func change_direction():
@@ -70,7 +58,8 @@ func change_direction():
 func start_running():
 	is_running = true
 	velocity.x = direction * SPEED
+	$AnimatedSprite2D.play("run")
 
-func _on_killzone_body_entered(body:Node2D):
-	print("hello world")
+
+func _on_killzone_body_entered(body):
 	$AnimatedSprite2D.play("attack")

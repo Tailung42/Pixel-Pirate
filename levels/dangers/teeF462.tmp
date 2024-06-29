@@ -144,7 +144,8 @@ debug_color = Color(0, 0.627451, 0.486275, 0.690196)
 position = Vector2(0.249999, 0.25)
 scale = Vector2(0.985294, 0.983333)
 sprite_frames = SubResource("SpriteFrames_mnv4e")
-animation = &"idle"
+animation = &"jump"
+autoplay = "run"
 
 [node name="killzone" parent="." instance=ExtResource("1_g4ial")]
 position = Vector2(1.5, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dah4kafks7se3"]
+[gd_scene load_steps=25 format=3 uid="uid://dah4kafks7se3"]
 
 [ext_resource type="PackedScene" uid="uid://bgmyrwrw0sbca" path="res://levels/world.tscn" id="1_4umjh"]
 [ext_resource type="Texture2D" uid="uid://da7e6j61r4msd" path="res://assets/Palm Tree Island/Sprites/Background/BG Image.png" id="1_nnk7e"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://qtatohwyytw7" path="res://levels/pickups/gold_coin.tscn" id="13_8pots"]
 [ext_resource type="PackedScene" uid="uid://doxovv8nv35sa" path="res://levels/pinetrees/fpineregular.tscn" id="13_yosh8"]
 [ext_resource type="Texture2D" uid="uid://bhe8edien2r38" path="res://assets/Palm Tree Island/Sprites/Background/Big Clouds.png" id="14_0b1hg"]
+[ext_resource type="PackedScene" uid="uid://dv1tt4vyo221o" path="res://levels/pickups/red_diamond.tscn" id="14_t7246"]
 [ext_resource type="PackedScene" uid="uid://dvorx775eyx7m" path="res://levels/pinetrees/fpineright.tscn" id="14_vbo3x"]
 [ext_resource type="PackedScene" uid="uid://2q3oa3ycbg60" path="res://levels/pinetrees/bpineright.tscn" id="18_bu54k"]
 [ext_resource type="PackedScene" uid="uid://d26buy4d1ehp2" path="res://levels/pickups/silver_coin.tscn" id="19_5qbno"]
@@ -205,7 +206,7 @@ position = Vector2(1365.88, 84)
 position = Vector2(1380.94, 379)
 
 [node name="silver_coin8" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
-position = Vector2(1455.26, 202)
+position = Vector2(1419.11, 274)
 
 [node name="silver_coin7" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
 position = Vector2(1451.24, 129)
@@ -230,11 +231,13 @@ position = Vector2(378.629, 391)
 [node name="Goldcoin" parent="pickpus/gold" instance=ExtResource("13_8pots")]
 position = Vector2(1285.53, 312)
 
-[node name="Goldcoin2" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1183.09, 473)
-
 [node name="Goldcoin3" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1093.71, 587)
+position = Vector2(1098.73, 552)
+
+[node name="diamonds" type="Node2D" parent="pickpus"]
+
+[node name="RedDiamond" parent="pickpus/diamonds" instance=ExtResource("14_t7246")]
+position = Vector2(1179.07, 502)
 
 [node name="pines" type="Node2D" parent="."]
 

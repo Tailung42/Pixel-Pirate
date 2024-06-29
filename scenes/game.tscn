@@ -9,6 +9,6 @@ scale = Vector2(0.837058, 1.07182)
 script = ExtResource("1_jdtcb")
 
 [node name="Player" parent="." instance=ExtResource("1_hsl5k")]
-position = Vector2(599.719, 322.815)
+position = Vector2(59.733, 254.707)
 
 [node name="levels" parent="." instance=ExtResource("4_p3q3s")]

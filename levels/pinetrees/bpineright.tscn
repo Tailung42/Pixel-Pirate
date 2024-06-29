@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://2q3oa3ycbg60"]
+
+[ext_resource type="Texture2D" uid="uid://bqbdspmlbd4vp" path="res://assets/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 01.png" id="1_x0tqt"]
+[ext_resource type="Texture2D" uid="uid://130h02rxqp24" path="res://assets/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 02.png" id="2_6bxut"]
+[ext_resource type="Texture2D" uid="uid://bo6j1ruiu7638" path="res://assets/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 03.png" id="3_gap35"]
+[ext_resource type="Texture2D" uid="uid://dstd1rrcxoi7q" path="res://assets/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 04.png" id="4_tuc0d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4nkyq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x0tqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6bxut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gap35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tuc0d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bpineright" type="Node2D"]
+z_index = -2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4nkyq")
+autoplay = "default"
+frame = 2
+frame_progress = 0.0331088

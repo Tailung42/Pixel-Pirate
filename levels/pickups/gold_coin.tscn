@@ -29,7 +29,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SilverCoin" type="Area2D"]
+[node name="Goldcoin" type="Area2D"]
 scale = Vector2(2, 2)
 collision_mask = 2
 script = ExtResource("1_4dc8l")

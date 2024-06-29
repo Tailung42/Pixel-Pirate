@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #constants
-const SPEED = 200.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -420.0
 # variables
 var direction = 1
@@ -29,16 +29,16 @@ func _physics_process(delta):
 	# handles wall collision
 	if $RayCastRight.is_colliding() and is_running:
 		stop_running()
-		$RayCastRight.enabled = false
+		# $RayCastRight.enabled = false
 		change_direction()
-		$RayCastLeft.enabled = true
+		# $RayCastLeft.enabled = true
 		start_running()
 
 	if $RayCastLeft.is_colliding() and is_running:
 		stop_running()
-		$RayCastLeft.enabled = false 
+		# $RayCastLeft.enabled = false 
 		change_direction()
-		$RayCastRight.enabled = true
+		# $RayCastRight.enabled = true
 		start_running()
 
 	move_and_slide()

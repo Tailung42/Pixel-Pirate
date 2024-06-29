@@ -156,11 +156,11 @@ shape = SubResource("RectangleShape2D_hwfyq")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 rotation = -0.00421864
-target_position = Vector2(-16.002, 0.432498)
+target_position = Vector2(-19.0019, 0.419842)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 rotation = 0.00536153
-target_position = Vector2(17.0024, 0.408847)
+target_position = Vector2(22.505, 0.879352)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 rotation = -3.13112

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://drwxlg3pujeqy" path="res://assets/Palm Tree Island/Sprites/Background/Additional Water.png" id="1_xc6ki"]
 [ext_resource type="PackedScene" uid="uid://dv0fk0wq8nufl" path="res://levels/pinetrees/bpineregular.tscn" id="2_8h0wn"]
 [ext_resource type="Texture2D" uid="uid://dxv2yh8gbsiup" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="3_cymgy"]
-[ext_resource type="PackedScene" uid="uid://cau83vn4mugm8" path="res://levels/pinetrees/fpineregular.tscn" id="3_kothd"]
+[ext_resource type="PackedScene" uid="uid://cau83vn4mugm8" path="res://levels/pinetrees/fpinelong.tscn" id="3_kothd"]
 [ext_resource type="PackedScene" uid="uid://cmu6gkh8j8r0g" path="res://levels/dangers/spikes.tscn" id="4_wfec4"]
 [ext_resource type="PackedScene" uid="uid://d26buy4d1ehp2" path="res://levels/pickups/silver_coin.tscn" id="5_3ishn"]
 [ext_resource type="PackedScene" uid="uid://dv1tt4vyo221o" path="res://levels/pickups/red_diamond.tscn" id="6_4y6ql"]

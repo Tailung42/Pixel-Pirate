@@ -12,8 +12,9 @@ func _process(delta):
 
 
 func _on_body_entered(body:Node2D):
-	print("dead")
-	$Timer.start()
+	if body.name == "Player":
+		print("dead")
+		$Timer.start()
 
 
 func _on_timer_timeout():

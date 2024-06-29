@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dah4kafks7se3"]
+[gd_scene load_steps=27 format=3 uid="uid://dah4kafks7se3"]
 
 [ext_resource type="PackedScene" uid="uid://bgmyrwrw0sbca" path="res://levels/world.tscn" id="1_4umjh"]
 [ext_resource type="Texture2D" uid="uid://da7e6j61r4msd" path="res://assets/Palm Tree Island/Sprites/Background/BG Image.png" id="1_nnk7e"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://d26buy4d1ehp2" path="res://levels/pickups/silver_coin.tscn" id="19_5qbno"]
 [ext_resource type="PackedScene" uid="uid://cpgca1geofrhx" path="res://levels/dangers/star.tscn" id="19_70vuo"]
 [ext_resource type="PackedScene" uid="uid://djfe236053bvc" path="res://levels/pinetrees/bpineleft.tscn" id="19_d1rsv"]
+[ext_resource type="PackedScene" uid="uid://dd3j5licftuep" path="res://levels/props/flag.tscn" id="22_jgw3r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uqkeb"]
 animations = [{
@@ -221,6 +222,9 @@ position = Vector2(2031.74, 60)
 [node name="silver_coin14" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
 position = Vector2(2095.01, 52)
 
+[node name="silver_coin15" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
+position = Vector2(1622.98, 308)
+
 [node name="silver_coin8" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
 position = Vector2(1419.11, 274)
 
@@ -312,6 +316,9 @@ position = Vector2(87.376, 352)
 
 [node name="bpalmleft" parent="props/pines" instance=ExtResource("19_d1rsv")]
 position = Vector2(1077.64, 158)
+
+[node name="flag" parent="props" instance=ExtResource("22_jgw3r")]
+position = Vector2(1652.11, 421)
 
 [node name="dangers" type="Node2D" parent="."]
 scale = Vector2(1.00432, 1)

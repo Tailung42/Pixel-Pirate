@@ -1,0 +1,171 @@
+[gd_scene load_steps=28 format=3 uid="uid://cpgca1geofrhx"]
+
+[ext_resource type="Script" path="res://scripts/teeth.gd" id="1_xdv17"]
+[ext_resource type="Texture2D" uid="uid://cltl621rk0k30" path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 01.png" id="2_im2lo"]
+[ext_resource type="Texture2D" uid="uid://b5x8mxrfeq51q" path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 02.png" id="3_i5cc7"]
+[ext_resource type="Texture2D" uid="uid://bhya4x8ha8pn0" path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 03.png" id="4_mah51"]
+[ext_resource type="Texture2D" uid="uid://cna6ikxryfces" path="res://assets/The Crusty Crew/Sprites/Pink Star/07-Attack/Attack 04.png" id="5_33eyl"]
+[ext_resource type="Texture2D" uid="uid://bfvyti2xhbtl8" path="res://assets/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png" id="6_4q416"]
+[ext_resource type="Texture2D" uid="uid://476uirskirre" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" id="8_kejmi"]
+[ext_resource type="Texture2D" uid="uid://0okhxdipoy2g" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" id="9_2n48u"]
+[ext_resource type="Texture2D" uid="uid://dwoe4xd16no5n" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" id="10_53k4g"]
+[ext_resource type="Texture2D" uid="uid://cjjj8e3o8scr6" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" id="11_c6o6w"]
+[ext_resource type="Texture2D" uid="uid://d2v2hholubfwy" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" id="12_as2px"]
+[ext_resource type="Texture2D" uid="uid://ha7c7bdhe7n1" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" id="13_fcpc8"]
+[ext_resource type="Texture2D" uid="uid://cgbyuafbtqufc" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" id="14_hukvy"]
+[ext_resource type="Texture2D" uid="uid://cytk5r4q8yil8" path="res://assets/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" id="15_8xb80"]
+[ext_resource type="Texture2D" uid="uid://cnfocvab1c0pt" path="res://assets/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" id="15_mer3g"]
+[ext_resource type="Texture2D" uid="uid://csw4w3g6tvfvw" path="res://assets/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" id="16_hd33v"]
+[ext_resource type="Texture2D" uid="uid://dgxfyen5phuqv" path="res://assets/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" id="17_uhuci"]
+[ext_resource type="Texture2D" uid="uid://cdevhhvf6bqp7" path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="18_08mqt"]
+[ext_resource type="Texture2D" uid="uid://bkj3lffcmv6bt" path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="19_eokfd"]
+[ext_resource type="Texture2D" uid="uid://ct10k2eggkp83" path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="20_5n1pg"]
+[ext_resource type="Texture2D" uid="uid://b8i1386ib1bfr" path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="21_7jh06"]
+[ext_resource type="Texture2D" uid="uid://kri1wolod8wq" path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="22_g286h"]
+[ext_resource type="Texture2D" uid="uid://led7jhn0v68d" path="res://assets/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="23_xxe47"]
+[ext_resource type="PackedScene" uid="uid://c213ajxst54ag" path="res://levels/dangers/killzone.tscn" id="25_ecp04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4s3q"]
+size = Vector2(9, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnv4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_im2lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i5cc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mah51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_33eyl")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4q416")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kejmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2n48u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_53k4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c6o6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_as2px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fcpc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kejmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hukvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8xb80")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_mer3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hd33v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uhuci")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_08mqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_eokfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5n1pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7jh06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_g286h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xxe47")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwfyq"]
+size = Vector2(18.5, 18.5)
+
+[node name="star" type="CharacterBody2D"]
+position = Vector2(0, -1)
+scale = Vector2(2, 2)
+collision_mask = 3
+script = ExtResource("1_xdv17")
+
+[node name="base" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 13)
+shape = SubResource("RectangleShape2D_e4s3q")
+debug_color = Color(0, 0.627451, 0.486275, 0.690196)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.249999, 0.25)
+scale = Vector2(0.985294, 0.983333)
+sprite_frames = SubResource("SpriteFrames_mnv4e")
+animation = &"attack"
+frame_progress = 0.0492491
+
+[node name="killzone" parent="." instance=ExtResource("25_ecp04")]
+position = Vector2(1.5, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_hwfyq")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+rotation = -0.00421864
+target_position = Vector2(-16.002, 0.432498)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+rotation = 0.00536153
+target_position = Vector2(17.0024, 0.408847)
+
+[node name="RayCastUp" type="RayCast2D" parent="."]
+rotation = -3.13112
+target_position = Vector2(1.73302, 69.9857)
+collision_mask = 3
+
+[connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
+[connection signal="body_exited" from="killzone" to="." method="_on_killzone_body_exited"]

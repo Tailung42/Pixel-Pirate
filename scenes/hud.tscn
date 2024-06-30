@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2u7lf6h2icvj"]
+
+[ext_resource type="Texture2D" uid="uid://bxckwox1vhow4" path="res://assets/icon/homepage.jpg" id="1_agx7c"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="initials" type="Node2D" parent="."]
+position = Vector2(-0.999999, -62)
+scale = Vector2(1.47951, 1.4256)
+
+[node name="background" type="TextureRect" parent="initials"]
+offset_right = 1380.0
+offset_bottom = 887.0
+scale = Vector2(1.47951, 1.4256)
+texture = ExtResource("1_agx7c")
+
+[node name="ingame" type="Node2D" parent="."]

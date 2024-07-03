@@ -2,17 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://daye7bbgvjkpb" path="res://scenes/player.tscn" id="1_hsl5k"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_jdtcb"]
+[ext_resource type="PackedScene" uid="uid://dah4kafks7se3" path="res://levels/level1.tscn" id="3_wo3xv"]
 [ext_resource type="PackedScene" uid="uid://b2u7lf6h2icvj" path="res://scenes/hud.tscn" id="4_0hhgv"]
-[ext_resource type="PackedScene" uid="uid://qhv5hdbj61f0" path="res://scenes/levels.tscn" id="4_p3q3s"]
 
 [node name="Game" type="Node2D"]
-scale = Vector2(0.837058, 1.07182)
+position = Vector2(-8, -1)
+scale = Vector2(0.839689, 1.08118)
 script = ExtResource("1_jdtcb")
-
-[node name="levels" parent="." instance=ExtResource("4_p3q3s")]
 
 [node name="HUD" parent="." instance=ExtResource("4_0hhgv")]
 
 [node name="Player" parent="." instance=ExtResource("1_hsl5k")]
 position = Vector2(50.1757, 408.651)
 scale = Vector2(1.19304, 1.0151)
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="level1" parent="." instance=ExtResource("3_wo3xv")]
+scale = Vector2(1.27186, 0.976416)
+
+[connection signal="diamond_picked" from="level1" to="." method="_on_level_1_diamond_picked"]
+[connection signal="gold_picked" from="level1" to="." method="_on_level_1_gold_picked"]
+[connection signal="silver_picked" from="level1" to="." method="_on_level_1_silver_picked"]

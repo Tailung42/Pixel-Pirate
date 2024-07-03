@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://dah4kafks7se3"]
+[gd_scene load_steps=28 format=3 uid="uid://dah4kafks7se3"]
 
 [ext_resource type="PackedScene" uid="uid://bgmyrwrw0sbca" path="res://levels/world.tscn" id="1_4umjh"]
+[ext_resource type="Script" path="res://scripts/level1.gd" id="1_lkftv"]
 [ext_resource type="Texture2D" uid="uid://da7e6j61r4msd" path="res://assets/Palm Tree Island/Sprites/Background/BG Image.png" id="1_nnk7e"]
 [ext_resource type="Texture2D" uid="uid://drwxlg3pujeqy" path="res://assets/Palm Tree Island/Sprites/Background/Additional Water.png" id="1_xc6ki"]
 [ext_resource type="PackedScene" uid="uid://dv0fk0wq8nufl" path="res://levels/pinetrees/bpineregular.tscn" id="2_8h0wn"]
@@ -49,6 +50,7 @@ animations = [{
 [node name="level1" type="Node2D"]
 position = Vector2(-10, 6)
 scale = Vector2(0.995697, 1)
+script = ExtResource("1_lkftv")
 
 [node name="world" parent="." instance=ExtResource("1_4umjh")]
 position = Vector2(10, 75)
@@ -145,51 +147,21 @@ scale = Vector2(1.14164, 2.14531)
 texture = ExtResource("14_0b1hg")
 
 [node name="BigClouds2" type="Sprite2D" parent="background/cloud"]
-position = Vector2(1010.38, 71.3681)
+position = Vector2(798.549, 52.7223)
 scale = Vector2(2.65184, 4.71733)
 texture = ExtResource("8_35det")
 
 [node name="BigClouds3" type="Sprite2D" parent="background/cloud"]
-position = Vector2(1580.11, 144.665)
+position = Vector2(1225.15, 147.237)
 scale = Vector2(2.78797, 8.32205)
 texture = ExtResource("9_rn0q8")
 
 [node name="BigClouds4" type="Sprite2D" parent="background/cloud"]
-position = Vector2(2173.44, 104.159)
+position = Vector2(1728.66, 79.0834)
 scale = Vector2(10.3342, 5.17986)
 texture = ExtResource("10_dxlrc")
 
 [node name="clouds" type="Node" parent="background"]
-
-[node name="SmallCloud1" type="Sprite2D" parent="background/clouds"]
-position = Vector2(3002.03, -156)
-scale = Vector2(0.995697, 1)
-texture = ExtResource("10_dxlrc")
-
-[node name="SmallCloud3" type="Sprite2D" parent="background/clouds"]
-position = Vector2(3113.54, -178)
-scale = Vector2(0.995697, 1)
-texture = ExtResource("8_35det")
-
-[node name="SmallCloud4" type="Sprite2D" parent="background/clouds"]
-position = Vector2(3109.56, -80)
-scale = Vector2(0.995697, 1)
-texture = ExtResource("9_rn0q8")
-
-[node name="SmallCloud6" type="Sprite2D" parent="background/clouds"]
-position = Vector2(3033.89, -144)
-scale = Vector2(0.995697, 1)
-texture = ExtResource("10_dxlrc")
-
-[node name="SmallCloud5" type="Sprite2D" parent="background/clouds"]
-position = Vector2(3155.36, -92)
-scale = Vector2(0.995697, 1)
-texture = ExtResource("10_dxlrc")
-
-[node name="SmallCloud2" type="Sprite2D" parent="background/clouds"]
-position = Vector2(3155.36, -134)
-scale = Vector2(0.995697, 1)
-texture = ExtResource("10_dxlrc")
 
 [node name="Node2D" type="Node2D" parent="background/clouds"]
 
@@ -272,18 +244,14 @@ position = Vector2(799.44, 417)
 scale = Vector2(2.00864, 2)
 
 [node name="fpineright" parent="pines" instance=ExtResource("14_vbo3x")]
-position = Vector2(1372.91, 414)
-scale = Vector2(2.00864, 2)
+position = Vector2(1377.93, 397)
+scale = Vector2(2.74819, 2.19564)
 
 [node name="fpineright2" parent="pines" instance=ExtResource("14_vbo3x")]
 position = Vector2(1814.81, 295)
 scale = Vector2(2.00864, 2)
 
 [node name="fpineright3" parent="pines" instance=ExtResource("14_vbo3x")]
-position = Vector2(1814.81, 295)
-scale = Vector2(2.00864, 2)
-
-[node name="fpineright4" parent="pines" instance=ExtResource("14_vbo3x")]
 position = Vector2(1814.81, 295)
 scale = Vector2(2.00864, 2)
 
@@ -350,3 +318,7 @@ position = Vector2(1394, 534)
 
 [node name="Teeth" parent="dangers/enemy" instance=ExtResource("12_5dvo8")]
 position = Vector2(379, 506)
+
+[connection signal="child_exiting_tree" from="pickpus/silver" to="." method="_on_silver_child_exiting_tree"]
+[connection signal="child_exiting_tree" from="pickpus/gold" to="." method="_on_gold_child_exiting_tree"]
+[connection signal="child_exiting_tree" from="pickpus/diamonds" to="." method="_on_diamonds_child_exiting_tree"]

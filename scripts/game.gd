@@ -1,11 +1,18 @@
 extends Node2D
 
+var silver = 0
+var gold = 0
+var diamond = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_level_1_diamond_picked():
+	diamond += 1
+	$HUD.update_diamond(diamond)
+
+func _on_level_1_gold_picked():
+	gold += 1
+	$HUD.update_gold(gold)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_level_1_silver_picked():
+	silver += 1
+	$HUD.update_silver(silver)

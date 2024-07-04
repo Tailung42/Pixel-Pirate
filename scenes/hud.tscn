@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2u7lf6h2icvj"]
+[gd_scene load_steps=13 format=3 uid="uid://b2u7lf6h2icvj"]
 
 [ext_resource type="Texture2D" uid="uid://bxckwox1vhow4" path="res://assets/icon/homepage.jpg" id="1_agx7c"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_ow573"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://81qk1whqfq16" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/1.png" id="7_yl6j3"]
 [ext_resource type="Texture2D" uid="uid://cqgtglepe8urv" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" id="8_ntvr1"]
 [ext_resource type="Texture2D" uid="uid://dfdrx3qefjphn" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/3.png" id="9_r0mxb"]
+[ext_resource type="Texture2D" uid="uid://6wj2fmn7mp2e" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Colors/4.png" id="10_w352s"]
+[ext_resource type="Texture2D" uid="uid://dc8lnmv2wy5pv" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Colors/3.png" id="11_w6ie3"]
+[ext_resource type="Texture2D" uid="uid://c223tvt30xrrn" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Colors/1.png" id="12_xitiu"]
 
 [node name="HUD" type="CanvasLayer"]
 scale = Vector2(1.5, 1.5)
@@ -33,9 +36,8 @@ expand_mode = 3
 position = Vector2(118, 18)
 
 [node name="InGame" type="Node2D" parent="."]
-position = Vector2(43, 50)
+position = Vector2(47.3333, 52.6667)
 scale = Vector2(0.604478, 0.572416)
-metadata/_edit_group_ = true
 
 [node name="Silver" type="Label" parent="InGame"]
 anchors_preset = 8
@@ -128,7 +130,6 @@ texture = ExtResource("5_ljgr3")
 [node name="HealthBar" type="Node2D" parent="InGame"]
 position = Vector2(28.1234, 43.6745)
 scale = Vector2(2, 2)
-metadata/_edit_group_ = true
 
 [node name="1" type="Sprite2D" parent="InGame/HealthBar"]
 position = Vector2(-13.2346, -45.4215)
@@ -144,6 +145,27 @@ texture = ExtResource("8_ntvr1")
 position = Vector2(39.7037, -45.4215)
 scale = Vector2(1.65432, 1.74698)
 texture = ExtResource("9_r0mxb")
+
+[node name="Red" type="TextureRect" parent="InGame/HealthBar"]
+offset_left = -12.0
+offset_top = -49.0
+offset_right = 114.0
+offset_bottom = -44.0
+texture = ExtResource("12_xitiu")
+
+[node name="Green" type="TextureRect" parent="InGame/HealthBar"]
+offset_left = -12.0
+offset_top = -49.0
+offset_right = 114.0
+offset_bottom = -39.0
+texture = ExtResource("10_w352s")
+
+[node name="Yellow" type="TextureRect" parent="InGame/HealthBar"]
+offset_left = -12.0
+offset_top = -49.0
+offset_right = 114.0
+offset_bottom = -39.0
+texture = ExtResource("11_w6ie3")
 
 [node name="gametimer" type="Timer" parent="."]
 one_shot = true

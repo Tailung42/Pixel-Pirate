@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
 #constants
-const SPEED = 200.0
+const SPEED = 170.0
 const JUMP_VELOCITY = -420.0
 # variables
 var direction = 1
 var is_running = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var iswaiting = false
 
 func _physics_process(delta):
 
@@ -24,21 +23,16 @@ func _physics_process(delta):
 	if $RayCastUp.is_colliding() and is_on_floor():
 		stop_running()
 		velocity.y = JUMP_VELOCITY
+		$AnimatedSprite2D.play("jump")
 
 
-	# handles wall collision
-	if $RayCastRight.is_colliding() and is_running:
-		stop_running()
-		# $RayCastRight.enabled = false
-		change_direction()
-		# $RayCastLeft.enabled = true
+	# # handles player detection
+	if $RayCastRight.is_colliding() and is_on_floor():
+		change_direction(1)
 		start_running()
 
-	if $RayCastLeft.is_colliding() and is_running:
-		stop_running()
-		# $RayCastLeft.enabled = false 
-		change_direction()
-		# $RayCastRight.enabled = true
+	if $RayCastLeft.is_colliding() and is_on_floor():
+		change_direction(-1)
 		start_running()
 
 	move_and_slide()
@@ -51,9 +45,17 @@ func stop_running():
 		$AnimatedSprite2D.play("idle")
 
 
-func change_direction():
-	direction = -direction
+func change_direction(string):
+	if string == 0:
+		direction = -direction
+
+	else:
+		if string == -1:
+			direction = -1
+		elif string == 1:
+			direction = 1
 	$AnimatedSprite2D.flip_h = direction > 0
+
 
 func start_running():
 	is_running = true
@@ -62,4 +64,13 @@ func start_running():
 
 
 func _on_killzone_body_entered(body):
-	$AnimatedSprite2D.play("attack")
+	if body.name == "Player":
+		$AnimatedSprite2D.play("attack")
+	else:
+		stop_running()
+		change_direction(0)
+		start_running()
+
+func _on_killzone_body_exited(body:Node2D):
+	if is_on_floor():
+		start_running()

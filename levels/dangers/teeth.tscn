@@ -153,25 +153,23 @@ position = Vector2(1.5, 0)
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-visible = false
 position = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_hwfyq")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-visible = false
 rotation = -0.00421864
-target_position = Vector2(-16.002, 0.432498)
+target_position = Vector2(-46.4996, -0.196166)
+collision_mask = 2
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-visible = false
 rotation = 0.00536153
-target_position = Vector2(17.0024, 0.408847)
+target_position = Vector2(42.5021, 0.272129)
+collision_mask = 2
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
-visible = false
 rotation = -3.13112
 target_position = Vector2(1.73302, 69.9857)
-collision_mask = 3
+collision_mask = 2
 
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
 [connection signal="body_exited" from="killzone" to="." method="_on_killzone_body_exited"]

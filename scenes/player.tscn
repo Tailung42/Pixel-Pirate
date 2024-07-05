@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://daye7bbgvjkpb"]
+[gd_scene load_steps=37 format=3 uid="uid://daye7bbgvjkpb"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5qaq0"]
 [ext_resource type="Texture2D" uid="uid://n72wa46dwpkx" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/08-Dead Ground/Dead Ground 01.png" id="1_nfr4w"]
@@ -30,6 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://bumh3yfvt21cy" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="27_xooeb"]
 [ext_resource type="Texture2D" uid="uid://tqoo4rmuiy3t" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="28_ts55y"]
 [ext_resource type="Texture2D" uid="uid://bct13ump5wmpj" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="29_fs0k6"]
+[ext_resource type="AudioStream" uid="uid://doney8gveknkn" path="res://assets/sound/death.mp3" id="31_3axt0"]
+[ext_resource type="AudioStream" uid="uid://lapyk21tkjra" path="res://assets/sound/jump.mp3" id="31_33h20"]
+[ext_resource type="AudioStream" uid="uid://cuy0qjfj7e818" path="res://assets/sound/damaged.mp3" id="33_kfcoo"]
+[ext_resource type="AudioStream" uid="uid://o1jia2lpkip7" path="res://assets/sound/running.mp3" id="34_dke36"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wv1m5"]
 animations = [{
@@ -191,3 +195,21 @@ offset = Vector2(200, -80)
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="sound" type="Node2D" parent="."]
+
+[node name="damaged" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("33_kfcoo")
+volume_db = 4.0
+
+[node name="dead" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("31_3axt0")
+volume_db = 4.0
+
+[node name="jump" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("31_33h20")
+volume_db = 4.0
+
+[node name="run" type="AudioStreamPlayer" parent="sound"]
+stream = ExtResource("34_dke36")
+volume_db = 10.0

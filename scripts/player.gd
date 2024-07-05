@@ -30,6 +30,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			jumps += 1
+			$sound/jump.play()
 		elif jumps > 0 and jumps < max_jumps:
 			velocity.y = JUMP_VELOCITY
 			jumps += 1
@@ -45,6 +46,7 @@ func _physics_process(delta):
 	# Play appropriate animations
 	if velocity.length() == 0:
 		$AnimatedSprite2D.animation = "idle"
+		$sound/run.stop()
 	if velocity.x != 0 and velocity.y == 0:
 		$AnimatedSprite2D.animation = "run"
 		$AnimatedSprite2D.flip_h = velocity.x < 0
@@ -59,10 +61,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 	if life == 0:
+		$sound/dead.play()
 		dead.emit()
 
 
 func player_damaged():
 	life -= 1
+	$sound/damaged.play()
 	damaged.emit()
 

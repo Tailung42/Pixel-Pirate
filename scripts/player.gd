@@ -1,11 +1,17 @@
 extends CharacterBody2D
+# variables
 var  max_jumps = 2
 var jumps
 var life = 3
+
+# constants
 const SPEED = 150.0
 const MAX_LIFE = 3
 const camera_offset_x = 200.0
 const JUMP_VELOCITY = -400.0
+# signals
+signal dead
+signal damaged
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -53,10 +59,10 @@ func _physics_process(delta):
 	move_and_slide()
 
 	if life == 0:
-		get_tree().reload_current_scene()
+		dead.emit()
 
 
 func player_damaged():
-	print("player damaged!!")
 	life -= 1
+	damaged.emit()
 

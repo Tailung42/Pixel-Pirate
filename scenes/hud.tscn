@@ -147,6 +147,7 @@ scale = Vector2(1.65432, 1.74698)
 texture = ExtResource("9_r0mxb")
 
 [node name="Red" type="TextureRect" parent="InGame/HealthBar"]
+visible = false
 offset_left = -12.0
 offset_top = -49.0
 offset_right = 114.0
@@ -154,6 +155,7 @@ offset_bottom = -44.0
 texture = ExtResource("12_xitiu")
 
 [node name="Green" type="TextureRect" parent="InGame/HealthBar"]
+visible = false
 offset_left = -12.0
 offset_top = -49.0
 offset_right = 114.0
@@ -161,11 +163,22 @@ offset_bottom = -39.0
 texture = ExtResource("10_w352s")
 
 [node name="Yellow" type="TextureRect" parent="InGame/HealthBar"]
+visible = false
 offset_left = -12.0
 offset_top = -49.0
 offset_right = 114.0
 offset_bottom = -39.0
 texture = ExtResource("11_w6ie3")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="InGame/HealthBar"]
+offset_left = -12.4074
+offset_top = -49.789
+offset_right = 19.5926
+offset_bottom = -47.789
+scale = Vector2(3.95488, 4.72805)
+value = 100.0
+texture_progress = ExtResource("10_w352s")
+tint_over = Color(0.936141, 0.63368, 0.7407, 1)
 
 [node name="gametimer" type="Timer" parent="."]
 one_shot = true

@@ -21,3 +21,5 @@ position = Vector2(195, 409)
 [connection signal="diamond_picked" from="level1" to="." method="_on_level_1_diamond_picked"]
 [connection signal="gold_picked" from="level1" to="." method="_on_level_1_gold_picked"]
 [connection signal="silver_picked" from="level1" to="." method="_on_level_1_silver_picked"]
+[connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
+[connection signal="dead" from="Player" to="." method="_on_player_dead"]

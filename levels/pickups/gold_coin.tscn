@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://qtatohwyytw7"]
+[gd_scene load_steps=9 format=3 uid="uid://qtatohwyytw7"]
 
-[ext_resource type="Script" path="res://scripts/gold_coin.gd" id="1_4dc8l"]
+[ext_resource type="Script" path="res://scripts/pickup.gd" id="1_tkrna"]
 [ext_resource type="Texture2D" uid="uid://m87p4spvl46" path="res://assets/Pirate Treasure/Sprites/Gold Coin/01.png" id="2_p8dma"]
 [ext_resource type="Texture2D" uid="uid://b7408h548ynt6" path="res://assets/Pirate Treasure/Sprites/Gold Coin/02.png" id="3_q6moi"]
 [ext_resource type="Texture2D" uid="uid://bkpvdewsnomb5" path="res://assets/Pirate Treasure/Sprites/Gold Coin/03.png" id="4_hjljh"]
 [ext_resource type="Texture2D" uid="uid://dyggo7rkd8rbe" path="res://assets/Pirate Treasure/Sprites/Gold Coin/04.png" id="5_tsxmj"]
+[ext_resource type="AudioStream" uid="uid://bqnnhoum476j5" path="res://assets/sound/coinpicked.mp3" id="6_mvart"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k5nho"]
 radius = 5.0
@@ -32,7 +33,7 @@ animations = [{
 [node name="Goldcoin" type="Area2D"]
 scale = Vector2(2, 2)
 collision_mask = 2
-script = ExtResource("1_4dc8l")
+script = ExtResource("1_tkrna")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -43,5 +44,9 @@ shape = SubResource("CircleShape2D_k5nho")
 sprite_frames = SubResource("SpriteFrames_bbgq3")
 autoplay = "default"
 frame_progress = 0.183783
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mvart")
+volume_db = 4.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

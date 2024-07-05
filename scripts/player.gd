@@ -50,3 +50,8 @@ func _physics_process(delta):
 
 
 	move_and_slide()
+
+
+func player_damaged():
+	print("player damaged!!")
+

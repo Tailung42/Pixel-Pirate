@@ -16,3 +16,7 @@ func _on_level_1_gold_picked():
 func _on_level_1_silver_picked():
 	silver += 1
 	$HUD.update_silver(silver)
+
+
+func player_damage():
+	pass

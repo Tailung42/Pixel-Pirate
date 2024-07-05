@@ -21,6 +21,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if $RayCastUp.is_colliding() and is_on_floor():
+		$RayCastUp.enabled = false
 		stop_running()
 		velocity.y = JUMP_VELOCITY
 		$AnimatedSprite2D.play("jump")
@@ -28,10 +29,15 @@ func _physics_process(delta):
 
 	# # handles player detection
 	if $RayCastRight.is_colliding() and is_on_floor():
+		$RayCastRight.enabled = false
+		$RayCastLeft.enabled = true
 		change_direction(1)
 		start_running()
 
 	if $RayCastLeft.is_colliding() and is_on_floor():
+		$RayCastRight.enabled = true
+		$RayCastLeft.enabled = false
+
 		change_direction(-1)
 		start_running()
 
@@ -66,6 +72,9 @@ func start_running():
 func _on_killzone_body_entered(body):
 	if body.name == "Player":
 		$AnimatedSprite2D.play("attack")
+		# if is_on_floor():
+		# 	await get_tree().create_timer(1).timeout
+		# 	start_running()
 	else:
 		stop_running()
 		change_direction(0)
@@ -73,4 +82,6 @@ func _on_killzone_body_entered(body):
 
 func _on_killzone_body_exited(body:Node2D):
 	if is_on_floor():
+		get_tree().create_timer(0.5).timeout
 		start_running()
+		$RayCastUp.enabled = true

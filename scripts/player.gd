@@ -1,8 +1,9 @@
 extends CharacterBody2D
 var  max_jumps = 2
 var jumps
-
+var life = 3
 const SPEED = 150.0
+const MAX_LIFE = 3
 const camera_offset_x = 200.0
 const JUMP_VELOCITY = -400.0
 
@@ -51,7 +52,11 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+	if life == 0:
+		get_tree().reload_current_scene()
+
 
 func player_damaged():
 	print("player damaged!!")
+	life -= 1
 

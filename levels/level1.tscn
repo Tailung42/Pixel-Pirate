@@ -241,13 +241,14 @@ position = Vector2(1098.73, 552)
 position = Vector2(1179.07, 502)
 
 [node name="pines" type="Node2D" parent="."]
+position = Vector2(1.00432, 0)
 
 [node name="fpineregular" parent="pines" instance=ExtResource("13_yosh8")]
 position = Vector2(799.44, 417)
 scale = Vector2(2.00864, 2)
 
 [node name="fpineright" parent="pines" instance=ExtResource("14_vbo3x")]
-position = Vector2(1377.93, 397)
+position = Vector2(1381.95, 415)
 scale = Vector2(2.74819, 2.19564)
 
 [node name="fpineright2" parent="pines" instance=ExtResource("14_vbo3x")]
@@ -329,7 +330,7 @@ position = Vector2(802, 518)
 [node name="enemy" type="Node2D" parent="dangers"]
 
 [node name="star" parent="dangers/enemy" instance=ExtResource("19_70vuo")]
-position = Vector2(1394, 534)
+position = Vector2(1394, 541)
 
 [node name="Teeth" parent="dangers/enemy" instance=ExtResource("12_5dvo8")]
 position = Vector2(379, 506)

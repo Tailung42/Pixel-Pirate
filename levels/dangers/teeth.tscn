@@ -136,7 +136,6 @@ collision_mask = 3
 script = ExtResource("1_niki5")
 
 [node name="base" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(1.5, 13)
 shape = SubResource("RectangleShape2D_e4s3q")
 debug_color = Color(0, 0.627451, 0.486275, 0.690196)
@@ -148,7 +147,6 @@ sprite_frames = SubResource("SpriteFrames_mnv4e")
 animation = &"idle"
 
 [node name="killzone" parent="." instance=ExtResource("1_g4ial")]
-visible = false
 position = Vector2(1.5, 0)
 collision_mask = 3
 

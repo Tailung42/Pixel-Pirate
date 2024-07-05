@@ -11,12 +11,12 @@ script = ExtResource("1_jdtcb")
 
 [node name="HUD" parent="." instance=ExtResource("4_0hhgv")]
 
-[node name="Player" parent="." instance=ExtResource("1_hsl5k")]
-position = Vector2(50.1757, 408.651)
-
 [node name="levels" type="Node2D" parent="."]
 
 [node name="level1" parent="." instance=ExtResource("3_wo3xv")]
+
+[node name="Player" parent="." instance=ExtResource("1_hsl5k")]
+position = Vector2(195, 409)
 
 [connection signal="diamond_picked" from="level1" to="." method="_on_level_1_diamond_picked"]
 [connection signal="gold_picked" from="level1" to="." method="_on_level_1_gold_picked"]

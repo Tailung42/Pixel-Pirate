@@ -14,14 +14,14 @@ func new_game():
 	diamond = 0
 	$Player.life = 3
 	$Player.show()
-	$Player.control = true 
+	$Player.control = true
+	$BgMusic.play()
 
 func game_over():
 	$HUD/Initials.show()
 	await get_tree().create_timer(0.8).timeout 
 	get_tree().reload_current_scene()
-
-
+	$BgMusic.stop()
 func _on_level_1_diamond_picked():
 	diamond += 1
 	$HUD.update_diamond(diamond)
@@ -47,3 +47,7 @@ func _on_player_dead():
 
 func _on_hud_start_game():
 	new_game()
+
+
+func _on_bg_music_finished():
+	$BgMusic.play()

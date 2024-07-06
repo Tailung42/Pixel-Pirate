@@ -36,216 +36,7 @@ scale = Vector2(1.5, 1.5)
 transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 script = ExtResource("1_ow573")
 
-[node name="gameover" type="Node2D" parent="."]
-position = Vector2(118, 18)
-
-[node name="StartButton" type="Control" parent="gameover"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 58.0
-offset_top = 46.0
-offset_right = 98.0
-offset_bottom = 75.0
-
-[node name="board" type="Sprite2D" parent="gameover/StartButton"]
-position = Vector2(331.641, 186.12)
-scale = Vector2(2.37288, 1.99364)
-texture = ExtResource("13_7oiwa")
-
-[node name="button" type="Node2D" parent="gameover/StartButton"]
-position = Vector2(389.333, 149.333)
-scale = Vector2(9.47715, 8.98113)
-
-[node name="buttonr" type="Sprite2D" parent="gameover/StartButton/button"]
-position = Vector2(-12.8083, 0)
-scale = Vector2(0.89089, 0.995269)
-texture = ExtResource("5_ow0tm")
-
-[node name="buttonl" type="Sprite2D" parent="gameover/StartButton/button"]
-scale = Vector2(1, 1)
-texture = ExtResource("4_4bndf")
-
-[node name="startButton" type="Button" parent="gameover/StartButton"]
-z_index = 1
-layout_mode = 0
-offset_left = 224.399
-offset_top = 108.025
-offset_right = 280.399
-offset_bottom = 139.025
-scale = Vector2(3.81333, 2.02052)
-theme_override_fonts/font = ExtResource("2_86d3w")
-flat = true
-
-[node name="Start" type="Node2D" parent="gameover/StartButton/startButton"]
-position = Vector2(20.8744, 15.1652)
-scale = Vector2(0.584539, 1.43108)
-
-[node name="Sprite2D7" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(-25.2394, 0)
-texture = ExtResource("7_q7h5q")
-
-[node name="Sprite2D8" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(-12.6197, 0)
-texture = ExtResource("18_fpx00")
-
-[node name="Sprite2D9" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(51.114, 0)
-texture = ExtResource("6_3o428")
-
-[node name="Sprite2D5" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(-23.4253, -17.6941)
-
-[node name="Sprite2D4" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(38.3355, 0)
-texture = ExtResource("7_q7h5q")
-
-[node name="Sprite2D3" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(25.557, 7.62939e-06)
-texture = ExtResource("8_n1qor")
-
-[node name="Sprite2D2" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-position = Vector2(12.7785, 0)
-texture = ExtResource("6_3o428")
-
-[node name="Sprite2D" type="Sprite2D" parent="gameover/StartButton/startButton/Start"]
-texture = ExtResource("9_qwxxi")
-
-[node name="scrollleft" type="Node2D" parent="gameover"]
-position = Vector2(111.333, 80)
-scale = Vector2(2.39424, 2.2387)
-metadata/_edit_group_ = true
-
-[node name="8" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(42.6667, 131.333)
-texture = ExtResource("10_d7n3v")
-
-[node name="7" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(10.6667, 131.333)
-texture = ExtResource("11_aomym")
-
-[node name="10" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(42.6667, 99.3334)
-texture = ExtResource("12_mass0")
-
-[node name="9" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(10.6667, 99.3334)
-texture = ExtResource("13_ime0s")
-
-[node name="6" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(42.6667, 67.3333)
-texture = ExtResource("12_mass0")
-
-[node name="4" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(42.6667, 35.3333)
-texture = ExtResource("12_mass0")
-
-[node name="5" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(10.6667, 67.3333)
-texture = ExtResource("13_ime0s")
-
-[node name="3" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(10.6667, 35.3333)
-texture = ExtResource("13_ime0s")
-
-[node name="2" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(42.6667, 3.33334)
-texture = ExtResource("14_8ivbl")
-
-[node name="1" type="Sprite2D" parent="gameover/scrollleft"]
-position = Vector2(10.6667, 3.33334)
-texture = ExtResource("15_611h6")
-
-[node name="Node2D2" type="Node2D" parent="gameover/scrollleft"]
-
-[node name="scrollright" type="Node2D" parent="gameover"]
-position = Vector2(538, 80)
-scale = Vector2(2.39424, 2.2387)
-metadata/_edit_group_ = true
-
-[node name="8" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(42.6667, 131.333)
-texture = ExtResource("10_d7n3v")
-
-[node name="7" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(10.6667, 131.333)
-texture = ExtResource("11_aomym")
-
-[node name="10" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(42.6667, 99.3334)
-texture = ExtResource("12_mass0")
-
-[node name="9" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(10.6667, 99.3334)
-texture = ExtResource("13_ime0s")
-
-[node name="6" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(42.6667, 67.3333)
-texture = ExtResource("12_mass0")
-
-[node name="4" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(42.6667, 35.3333)
-texture = ExtResource("12_mass0")
-
-[node name="5" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(10.6667, 67.3333)
-texture = ExtResource("13_ime0s")
-
-[node name="3" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(10.6667, 35.3333)
-texture = ExtResource("13_ime0s")
-
-[node name="2" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(42.6667, 3.33334)
-texture = ExtResource("14_8ivbl")
-
-[node name="1" type="Sprite2D" parent="gameover/scrollright"]
-position = Vector2(10.6667, 3.33334)
-texture = ExtResource("15_611h6")
-
-[node name="game" type="Node2D" parent="gameover"]
-position = Vector2(175.333, 120.667)
-scale = Vector2(3, 3)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="gameover/game"]
-position = Vector2(0, 10.6667)
-texture = ExtResource("16_kwkwj")
-
-[node name="Sprite2D2" type="Sprite2D" parent="gameover/game"]
-position = Vector2(0, 26.6667)
-texture = ExtResource("8_n1qor")
-
-[node name="Sprite2D3" type="Sprite2D" parent="gameover/game"]
-position = Vector2(0, 42.6667)
-texture = ExtResource("17_qmdpn")
-
-[node name="Sprite2D4" type="Sprite2D" parent="gameover/game"]
-position = Vector2(0, 58.6667)
-texture = ExtResource("18_fpx00")
-
-[node name="game2" type="Node2D" parent="gameover"]
-position = Vector2(602, 120.667)
-scale = Vector2(3, 3)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="gameover/game2"]
-position = Vector2(0, 10.6667)
-texture = ExtResource("19_15i2p")
-
-[node name="Sprite2D2" type="Sprite2D" parent="gameover/game2"]
-position = Vector2(0, 26.6667)
-texture = ExtResource("20_h11gt")
-
-[node name="Sprite2D3" type="Sprite2D" parent="gameover/game2"]
-position = Vector2(0, 42.6667)
-texture = ExtResource("18_fpx00")
-
-[node name="Sprite2D4" type="Sprite2D" parent="gameover/game2"]
-position = Vector2(0, 58.6667)
-texture = ExtResource("7_q7h5q")
-
 [node name="Initials" type="Node2D" parent="."]
-visible = false
 position = Vector2(-0.999999, -62)
 scale = Vector2(1.47951, 1.4256)
 
@@ -258,6 +49,69 @@ scale = Vector2(0.642438, 0.533394)
 texture = ExtResource("1_agx7c")
 expand_mode = 3
 stretch_mode = 2
+
+[node name="StartButton" type="Control" parent="Initials"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 119.634
+offset_top = 88.3838
+offset_right = 159.634
+offset_bottom = 117.384
+
+[node name="board" type="Sprite2D" parent="Initials/StartButton"]
+position = Vector2(331.641, 186.12)
+scale = Vector2(2.37288, 1.99364)
+texture = ExtResource("13_7oiwa")
+
+[node name="button" type="Node2D" parent="Initials/StartButton"]
+position = Vector2(389.333, 149.333)
+scale = Vector2(9.47715, 8.98113)
+
+[node name="buttonr" type="Sprite2D" parent="Initials/StartButton/button"]
+position = Vector2(-12.8083, 0)
+scale = Vector2(0.89089, 0.995269)
+texture = ExtResource("5_ow0tm")
+
+[node name="buttonl" type="Sprite2D" parent="Initials/StartButton/button"]
+scale = Vector2(1, 1)
+texture = ExtResource("4_4bndf")
+
+[node name="startButton" type="Button" parent="Initials/StartButton"]
+z_index = 1
+layout_mode = 0
+offset_left = 224.399
+offset_top = 108.025
+offset_right = 280.399
+offset_bottom = 139.025
+scale = Vector2(3.81333, 2.02052)
+theme_override_fonts/font = ExtResource("2_86d3w")
+flat = true
+
+[node name="Start" type="Node2D" parent="Initials/StartButton/startButton"]
+position = Vector2(7.3261, 15.0438)
+scale = Vector2(0.776593, 1.85936)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(51.114, 0)
+texture = ExtResource("6_3o428")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(-23.4253, -17.6941)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(38.3355, 0)
+texture = ExtResource("7_q7h5q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(25.557, 7.62939e-06)
+texture = ExtResource("8_n1qor")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(12.7785, 0)
+texture = ExtResource("6_3o428")
+
+[node name="Sprite2D" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+texture = ExtResource("9_qwxxi")
 
 [node name="InGame" type="Node2D" parent="."]
 position = Vector2(47.3333, 52.6667)
@@ -404,4 +258,215 @@ value = 100.0
 texture_progress = ExtResource("10_w352s")
 tint_over = Color(0.936141, 0.63368, 0.7407, 1)
 
-[connection signal="pressed" from="gameover/StartButton/startButton" to="." method="_on_start_button_pressed"]
+[node name="GameOver" type="Node2D" parent="."]
+visible = false
+position = Vector2(144, 74.6667)
+scale = Vector2(1.33978, 1.30247)
+
+[node name="StartButton" type="Control" parent="GameOver"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 58.0
+offset_top = 46.0
+offset_right = 98.0
+offset_bottom = 75.0
+
+[node name="board" type="Sprite2D" parent="GameOver/StartButton"]
+position = Vector2(331.641, 186.12)
+scale = Vector2(2.37288, 1.99364)
+texture = ExtResource("13_7oiwa")
+
+[node name="button" type="Node2D" parent="GameOver/StartButton"]
+position = Vector2(389.333, 149.333)
+scale = Vector2(9.47715, 8.98113)
+
+[node name="buttonr" type="Sprite2D" parent="GameOver/StartButton/button"]
+position = Vector2(-12.8083, 0)
+scale = Vector2(0.89089, 0.995269)
+texture = ExtResource("5_ow0tm")
+
+[node name="buttonl" type="Sprite2D" parent="GameOver/StartButton/button"]
+scale = Vector2(1, 1)
+texture = ExtResource("4_4bndf")
+
+[node name="startButton" type="Button" parent="GameOver/StartButton"]
+z_index = 1
+layout_mode = 0
+offset_left = 224.399
+offset_top = 108.025
+offset_right = 280.399
+offset_bottom = 139.025
+scale = Vector2(3.81333, 2.02052)
+theme_override_fonts/font = ExtResource("2_86d3w")
+flat = true
+
+[node name="Start" type="Node2D" parent="GameOver/StartButton/startButton"]
+position = Vector2(20.8744, 15.1652)
+scale = Vector2(0.584539, 1.43108)
+
+[node name="Sprite2D7" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(-25.2394, 0)
+texture = ExtResource("7_q7h5q")
+
+[node name="Sprite2D8" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(-12.6197, 0)
+texture = ExtResource("18_fpx00")
+
+[node name="Sprite2D9" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(51.114, 0)
+texture = ExtResource("6_3o428")
+
+[node name="Sprite2D5" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(-23.4253, -17.6941)
+
+[node name="Sprite2D4" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(38.3355, 0)
+texture = ExtResource("7_q7h5q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(25.557, 7.62939e-06)
+texture = ExtResource("8_n1qor")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+position = Vector2(12.7785, 0)
+texture = ExtResource("6_3o428")
+
+[node name="Sprite2D" type="Sprite2D" parent="GameOver/StartButton/startButton/Start"]
+texture = ExtResource("9_qwxxi")
+
+[node name="scrollleft" type="Node2D" parent="GameOver"]
+position = Vector2(111.333, 80)
+scale = Vector2(2.39424, 2.2387)
+metadata/_edit_group_ = true
+
+[node name="8" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(42.6667, 131.333)
+texture = ExtResource("10_d7n3v")
+
+[node name="7" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(10.6667, 131.333)
+texture = ExtResource("11_aomym")
+
+[node name="10" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(42.6667, 99.3334)
+texture = ExtResource("12_mass0")
+
+[node name="9" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(10.6667, 99.3334)
+texture = ExtResource("13_ime0s")
+
+[node name="6" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(42.6667, 67.3333)
+texture = ExtResource("12_mass0")
+
+[node name="4" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(42.6667, 35.3333)
+texture = ExtResource("12_mass0")
+
+[node name="5" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(10.6667, 67.3333)
+texture = ExtResource("13_ime0s")
+
+[node name="3" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(10.6667, 35.3333)
+texture = ExtResource("13_ime0s")
+
+[node name="2" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(42.6667, 3.33334)
+texture = ExtResource("14_8ivbl")
+
+[node name="1" type="Sprite2D" parent="GameOver/scrollleft"]
+position = Vector2(10.6667, 3.33334)
+texture = ExtResource("15_611h6")
+
+[node name="Node2D2" type="Node2D" parent="GameOver/scrollleft"]
+
+[node name="scrollright" type="Node2D" parent="GameOver"]
+position = Vector2(538, 80)
+scale = Vector2(2.39424, 2.2387)
+metadata/_edit_group_ = true
+
+[node name="8" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(42.6667, 131.333)
+texture = ExtResource("10_d7n3v")
+
+[node name="7" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(10.6667, 131.333)
+texture = ExtResource("11_aomym")
+
+[node name="10" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(42.6667, 99.3334)
+texture = ExtResource("12_mass0")
+
+[node name="9" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(10.6667, 99.3334)
+texture = ExtResource("13_ime0s")
+
+[node name="6" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(42.6667, 67.3333)
+texture = ExtResource("12_mass0")
+
+[node name="4" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(42.6667, 35.3333)
+texture = ExtResource("12_mass0")
+
+[node name="5" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(10.6667, 67.3333)
+texture = ExtResource("13_ime0s")
+
+[node name="3" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(10.6667, 35.3333)
+texture = ExtResource("13_ime0s")
+
+[node name="2" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(42.6667, 3.33334)
+texture = ExtResource("14_8ivbl")
+
+[node name="1" type="Sprite2D" parent="GameOver/scrollright"]
+position = Vector2(10.6667, 3.33334)
+texture = ExtResource("15_611h6")
+
+[node name="game" type="Node2D" parent="GameOver"]
+position = Vector2(175.333, 120.667)
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="GameOver/game"]
+position = Vector2(0, 10.6667)
+texture = ExtResource("16_kwkwj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GameOver/game"]
+position = Vector2(0, 26.6667)
+texture = ExtResource("8_n1qor")
+
+[node name="Sprite2D3" type="Sprite2D" parent="GameOver/game"]
+position = Vector2(0, 42.6667)
+texture = ExtResource("17_qmdpn")
+
+[node name="Sprite2D4" type="Sprite2D" parent="GameOver/game"]
+position = Vector2(0, 58.6667)
+texture = ExtResource("18_fpx00")
+
+[node name="over" type="Node2D" parent="GameOver"]
+position = Vector2(602, 120.667)
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="GameOver/over"]
+position = Vector2(0, 10.6667)
+texture = ExtResource("19_15i2p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GameOver/over"]
+position = Vector2(0, 26.6667)
+texture = ExtResource("20_h11gt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="GameOver/over"]
+position = Vector2(0, 42.6667)
+texture = ExtResource("18_fpx00")
+
+[node name="Sprite2D4" type="Sprite2D" parent="GameOver/over"]
+position = Vector2(0, 58.6667)
+texture = ExtResource("7_q7h5q")
+
+[connection signal="pressed" from="Initials/StartButton/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="GameOver/StartButton/startButton" to="." method="_on_start_button_pressed"]

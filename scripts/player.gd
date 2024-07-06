@@ -73,9 +73,3 @@ func player_damaged():
 		dead.emit()
 
 
-# func start():
-# 	control = true
-
-
-# func stop():
-# 	control = false

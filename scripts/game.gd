@@ -14,7 +14,7 @@ func new_game():
 	gold = 0
 	$HUD.update_gold(gold)
 	diamond = 0
-	$HUD.update_diamond()
+	$HUD.update_diamond(diamond)
 	$Player/CollisionShape2D.disabled = false
 	$Player.life = 3
 	$Player.show()
@@ -25,8 +25,7 @@ func game_over():
 	$Player.control = false
 	$Player.hide()
 	$Player/CollisionShape2D.disabled = true
-	# $HUD/gameover.show()
-	$HUD/Initials.show()
+	$HUD/GameOver.show()
 	$HUD/InGame.hide()
 	await get_tree().create_timer(0.8).timeout 
 	$BgMusic.stop()

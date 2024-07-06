@@ -192,7 +192,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.164706)
 position = Vector2(33, 54)
 scale = Vector2(2, 2)
 offset = Vector2(200, -80)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2.3, 2.3)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 

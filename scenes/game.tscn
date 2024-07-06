@@ -18,6 +18,7 @@ script = ExtResource("1_jdtcb")
 [node name="Player" parent="." instance=ExtResource("1_hsl5k")]
 position = Vector2(195, 409)
 
+[connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]
 [connection signal="diamond_picked" from="level1" to="." method="_on_level_1_diamond_picked"]
 [connection signal="gold_picked" from="level1" to="." method="_on_level_1_gold_picked"]
 [connection signal="silver_picked" from="level1" to="." method="_on_level_1_silver_picked"]

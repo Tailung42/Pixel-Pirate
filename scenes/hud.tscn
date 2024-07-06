@@ -1,39 +1,110 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2u7lf6h2icvj"]
+[gd_scene load_steps=20 format=3 uid="uid://b2u7lf6h2icvj"]
 
 [ext_resource type="Texture2D" uid="uid://bxckwox1vhow4" path="res://assets/icon/homepage.jpg" id="1_agx7c"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_ow573"]
 [ext_resource type="FontFile" uid="uid://b6awyna3nk1hj" path="res://assets/Wood and Paper UI/Daydream.ttf" id="2_86d3w"]
 [ext_resource type="Texture2D" uid="uid://m87p4spvl46" path="res://assets/Pirate Treasure/Sprites/Gold Coin/01.png" id="3_vhyso"]
+[ext_resource type="Texture2D" uid="uid://3g6q07gj1xt6" path="res://assets/Wood and Paper UI/Sprites/Green Button/4.png" id="4_4bndf"]
 [ext_resource type="Texture2D" uid="uid://cxa5ra3fsxks5" path="res://assets/Pirate Treasure/Sprites/Silver Coin/01.png" id="4_5x776"]
 [ext_resource type="Texture2D" uid="uid://b7gm0lngprmp3" path="res://assets/Pirate Treasure/Sprites/Red Diamond/01.png" id="5_ljgr3"]
+[ext_resource type="Texture2D" uid="uid://cxuxl58kmp1fj" path="res://assets/Wood and Paper UI/Sprites/Green Button/2.png" id="5_ow0tm"]
+[ext_resource type="Texture2D" uid="uid://dvaveucfnj8xl" path="res://assets/Wood and Paper UI/Sprites/Big Text/20.png" id="6_3o428"]
+[ext_resource type="Texture2D" uid="uid://chjfh830qc5pk" path="res://assets/Wood and Paper UI/Sprites/Big Text/18.png" id="7_q7h5q"]
 [ext_resource type="Texture2D" uid="uid://81qk1whqfq16" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/1.png" id="7_yl6j3"]
+[ext_resource type="Texture2D" uid="uid://dgy8ffnejxpt0" path="res://assets/Wood and Paper UI/Sprites/Big Text/1.png" id="8_n1qor"]
 [ext_resource type="Texture2D" uid="uid://cqgtglepe8urv" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" id="8_ntvr1"]
+[ext_resource type="Texture2D" uid="uid://cvluiuw04ukq3" path="res://assets/Wood and Paper UI/Sprites/Big Text/19.png" id="9_qwxxi"]
 [ext_resource type="Texture2D" uid="uid://dfdrx3qefjphn" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/3.png" id="9_r0mxb"]
 [ext_resource type="Texture2D" uid="uid://6wj2fmn7mp2e" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Colors/4.png" id="10_w352s"]
 [ext_resource type="Texture2D" uid="uid://dc8lnmv2wy5pv" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Colors/3.png" id="11_w6ie3"]
 [ext_resource type="Texture2D" uid="uid://c223tvt30xrrn" path="res://assets/Wood and Paper UI/Sprites/Life Bars/Colors/1.png" id="12_xitiu"]
+[ext_resource type="Texture2D" uid="uid://de4aogsaljob6" path="res://assets/Wood and Paper UI/Sprites/Prefabs/3.png" id="13_7oiwa"]
 
 [node name="HUD" type="CanvasLayer"]
 scale = Vector2(1.5, 1.5)
 transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 script = ExtResource("1_ow573")
 
-[node name="initials" type="Node2D" parent="."]
+[node name="gameover" type="Node2D" parent="."]
 visible = false
+position = Vector2(118, 18)
+
+[node name="Initials" type="Node2D" parent="."]
 position = Vector2(-0.999999, -62)
 scale = Vector2(1.47951, 1.4256)
 
-[node name="background" type="TextureRect" parent="initials"]
-offset_left = -16.2216
-offset_top = -78.5634
-offset_right = 1363.78
-offset_bottom = 808.437
-scale = Vector2(0.963778, 0.980939)
+[node name="background" type="TextureRect" parent="Initials"]
+offset_left = -2.9289
+offset_top = 43.4905
+offset_right = 1377.07
+offset_bottom = 930.491
+scale = Vector2(0.642438, 0.533394)
 texture = ExtResource("1_agx7c")
 expand_mode = 3
+stretch_mode = 2
 
-[node name="gameover" type="Node2D" parent="."]
-position = Vector2(118, 18)
+[node name="StartButton" type="Control" parent="Initials"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 57.4515
+offset_top = 122.521
+offset_right = 97.4515
+offset_bottom = 162.521
+
+[node name="board" type="Sprite2D" parent="Initials/StartButton"]
+position = Vector2(331.641, 186.12)
+scale = Vector2(2.37288, 1.99364)
+texture = ExtResource("13_7oiwa")
+
+[node name="buttonl" type="Sprite2D" parent="Initials/StartButton"]
+position = Vector2(385.454, 145.528)
+scale = Vector2(8.96381, 6.16608)
+texture = ExtResource("4_4bndf")
+
+[node name="buttonr" type="Sprite2D" parent="Initials/StartButton"]
+position = Vector2(270.643, 145.528)
+scale = Vector2(7.98577, 6.13691)
+texture = ExtResource("5_ow0tm")
+
+[node name="startButton" type="Button" parent="Initials/StartButton"]
+z_index = 1
+layout_mode = 0
+offset_left = 224.399
+offset_top = 108.025
+offset_right = 280.399
+offset_bottom = 139.025
+scale = Vector2(3.81333, 2.02052)
+theme_override_fonts/font = ExtResource("2_86d3w")
+flat = true
+
+[node name="Start" type="Node2D" parent="Initials/StartButton/startButton"]
+position = Vector2(7.56252, 14.8124)
+scale = Vector2(0.791672, 1.40006)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(51.114, 0)
+texture = ExtResource("6_3o428")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(-23.4253, -17.6941)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(38.3355, 0)
+texture = ExtResource("7_q7h5q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(25.557, 7.62939e-06)
+texture = ExtResource("8_n1qor")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+position = Vector2(12.7785, 0)
+texture = ExtResource("6_3o428")
+
+[node name="Sprite2D" type="Sprite2D" parent="Initials/StartButton/startButton/Start"]
+texture = ExtResource("9_qwxxi")
+
+[node name="gametimer" type="Timer" parent="Initials"]
+one_shot = true
 
 [node name="InGame" type="Node2D" parent="."]
 position = Vector2(47.3333, 52.6667)
@@ -180,5 +251,4 @@ value = 100.0
 texture_progress = ExtResource("10_w352s")
 tint_over = Color(0.936141, 0.63368, 0.7407, 1)
 
-[node name="gametimer" type="Timer" parent="."]
-one_shot = true
+[connection signal="pressed" from="Initials/StartButton/startButton" to="." method="_on_start_button_pressed"]

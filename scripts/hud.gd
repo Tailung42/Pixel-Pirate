@@ -1,12 +1,17 @@
 extends CanvasLayer
 
-@onready var progress_bar = $InGame/HealthBar/ProgressBar
+@onready  var progress_bar = $InGame/HealthBar/ProgressBar
 
+signal start_game
 
-# func _ready():
-# 	_update_progress_bar_color(progress_bar.value)
+func _ready():
+	# _update_progress_bar_color(progress_bar.value)
+	$InGame.hide()
+	$Initials/StartButton.hide()
+	await get_tree().create_timer(0.5).timeout
+	$Initials/StartButton.show()
 
-
+	
 func update_silver(silver):
 	$InGame/Silver.text = str(silver)
 
@@ -17,24 +22,11 @@ func update_diamond(diamond):
 	$InGame/Diamond.text = str(diamond)
 
 func show_damage():
-	progress_bar.value -=  1.0/3.1 * progress_bar.max_value 
+	progress_bar.value -=  1.0/3 * progress_bar.max_value
 
-	if progress_bar.value == 100:
-		# set color to green
-		pass
-	elif progress_bar.value < 67:
-			# set color to yellow 
-			pass
-	elif progress_bar.value < 34:
-			# set color to red 
-			pass
-			
-# func _update_progress_bar_color(value):
-# 	var r = lerp(value / progress_bar.max_value, 1.0, 0.0) # Interpolates from 1 to 0 based on value
-# 	var g = lerp(value / progress_bar.max_value, 0.0, 1.0) # Interpolates from 0 to 1 based on value
-# 	var style_box = progress_bar.get("custom_styles/fg")
 
-# 	if style_box != null:
-# 			style_box.bg_color = Color(r, g, 0)
-# 	else:
-# 			print("StyleBox is null. Make sure 'custom_styles/fg' is properly assigned.")
+func _on_start_button_pressed():
+	await get_tree().create_timer(0.5).timeout
+	start_game.emit()
+	$Initials.hide()
+	$InGame.show()

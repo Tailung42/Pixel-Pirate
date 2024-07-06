@@ -10,18 +10,28 @@ func _ready():
 func new_game():
 	print("new game started")
 	silver = 0
+	$HUD.update_silver(silver)
 	gold = 0
+	$HUD.update_gold(gold)
 	diamond = 0
+	$HUD.update_diamond()
+	$Player/CollisionShape2D.disabled = false
 	$Player.life = 3
 	$Player.show()
 	$Player.control = true
 	$BgMusic.play()
 
 func game_over():
+	$Player.control = false
+	$Player.hide()
+	$Player/CollisionShape2D.disabled = true
+	# $HUD/gameover.show()
 	$HUD/Initials.show()
+	$HUD/InGame.hide()
 	await get_tree().create_timer(0.8).timeout 
-	get_tree().reload_current_scene()
 	$BgMusic.stop()
+
+
 func _on_level_1_diamond_picked():
 	diamond += 1
 	$HUD.update_diamond(diamond)

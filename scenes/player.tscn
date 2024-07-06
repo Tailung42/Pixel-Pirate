@@ -208,7 +208,7 @@ volume_db = 4.0
 
 [node name="jump" type="AudioStreamPlayer" parent="sound"]
 stream = ExtResource("31_33h20")
-volume_db = 4.0
+volume_db = -1.0
 
 [node name="run" type="AudioStreamPlayer" parent="sound"]
 stream = ExtResource("34_dke36")

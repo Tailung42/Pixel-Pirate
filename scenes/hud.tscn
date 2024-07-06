@@ -46,10 +46,11 @@ stretch_mode = 2
 [node name="StartButton" type="Control" parent="Initials"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 57.4515
-offset_top = 122.521
-offset_right = 97.4515
-offset_bottom = 162.521
+offset_left = 105.215
+offset_top = 88.3838
+offset_right = 145.215
+offset_bottom = 128.384
+metadata/_edit_group_ = true
 
 [node name="board" type="Sprite2D" parent="Initials/StartButton"]
 position = Vector2(331.641, 186.12)

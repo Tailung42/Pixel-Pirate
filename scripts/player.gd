@@ -1,7 +1,7 @@
 extends CharacterBody2D
 # variables
 var  max_jumps = 2
-var jumps
+var jumps = 0
 var life = 3
 
 # constants
@@ -59,14 +59,14 @@ func _physics_process(delta):
 
 
 	move_and_slide()
-
-	if life == 0:
-		$sound/dead.play()
-		dead.emit()
-
+	
 
 func player_damaged():
 	life -= 1
-	$sound/damaged.play()
 	damaged.emit()
+	if life > 0:
+		$sound/damaged.play()
+	else:
+		$sound/dead.play()
+		dead.emit()
 

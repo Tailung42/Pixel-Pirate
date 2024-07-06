@@ -25,4 +25,5 @@ func _on_player_damaged():
 	$HUD.show_damage()
 
 func _on_player_dead():
+	await get_tree().create_timer(0.8).timeout 
 	get_tree().reload_current_scene()

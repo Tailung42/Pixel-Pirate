@@ -13,11 +13,15 @@ config_version=5
 config/name="final project"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/image="res://assets/icon/icon.png"
+boot_splash/fullsize=false
 
 [display]
 
-window/size/viewport_width=1366
-window/size/viewport_height=768
+window/size/viewport_width=1958
+window/size/viewport_height=972
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [input]
 

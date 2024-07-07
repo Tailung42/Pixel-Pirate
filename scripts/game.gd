@@ -7,21 +7,29 @@ var level_paths = {
 	"level_1": "res://levels/level1.tscn", 
 	"level_2": "res://levels/level2.tscn"
 }
-var current_level = null 
-var level_index:int 
+var current_level
+@onready var level_index = 1
+@onready var player = $Player
+@onready var end_position = $EndPosition
 func _ready():
-	$Player.hide()
+	player.hide()
+
+func _process(delta):
+	if player.position.x > end_position.position.x:
+		new_level()
+		Marker2D
+
+
 
 func new_game():
-	switch_level("level_1")
-	level_index = 1
-	# silver = 0
-	# $HUD.update_silver(silver)
-	# print("silver updated")
-	# gold = 0
-	# $HUD.update_gold(gold)
-	# diamond = 0
-	# $HUD.update_diamond(diamond)
+	switch_level("level_" + str(level_index))
+	silver = 0
+	$HUD.update_silver(silver)
+	print("silver updated")
+	gold = 0
+	$HUD.update_gold(gold)
+	diamond = 0
+	$HUD.update_diamond(diamond)
 	$Player/CollisionShape2D.disabled = false
 	$Player.life = 3
 	$Player.position = $StartPosition.position
@@ -72,7 +80,6 @@ func _on_bg_music_finished():
 
 
 func switch_level(level_name):
-	pass 
 	# unload current level 
 	if current_level:
 		current_level.queue_free()
@@ -93,3 +100,7 @@ func switch_level(level_name):
 
 	if current_level.has_signal("diamond_picked"):
 		current_level.connect("diamond_picked", Callable(self, "_on_diamond_picked"))
+
+func new_level():
+	level_index += 1
+	new_game()

@@ -10,7 +10,6 @@ func _ready():
 			print("gold signal connected")
 	if name.contains("silver_coin"):
 			connect("silver_picked", Callable(game_scene, "_on_silver_picked"))
-			print("silver signal connected")
 	if name.contains("diamond"):
 			connect("diamond_picked", Callable(game_scene, "_on_diamond_picked"))
 			print("diamond signal connected")

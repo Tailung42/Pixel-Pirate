@@ -197,6 +197,9 @@ position = Vector2(2095.01, 52)
 [node name="silver_coin15" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
 position = Vector2(1622.98, 308)
 
+[node name="silver_coin16" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
+position = Vector2(1619.97, 192)
+
 [node name="silver_coin8" parent="pickpus/silver" instance=ExtResource("19_5qbno")]
 position = Vector2(1419.11, 274)
 
@@ -220,25 +223,22 @@ position = Vector2(378.629, 391)
 
 [node name="gold" type="Node2D" parent="pickpus"]
 
-[node name="Goldcoin" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1285.53, 312)
+[node name="gold_coin" parent="pickpus/gold" instance=ExtResource("13_8pots")]
+position = Vector2(1227.28, 415)
 
-[node name="Goldcoin2" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1805.77, 266)
+[node name="gold_coin2" parent="pickpus/gold" instance=ExtResource("13_8pots")]
+position = Vector2(1109.78, 629)
 
-[node name="Goldcoin4" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1674.2, 75)
+[node name="gold_coin3" parent="pickpus/gold" instance=ExtResource("13_8pots")]
+position = Vector2(1818.83, 257)
 
-[node name="Goldcoin5" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1619.97, 119)
-
-[node name="Goldcoin3" parent="pickpus/gold" instance=ExtResource("13_8pots")]
-position = Vector2(1098.73, 552)
+[node name="gold_coin4" parent="pickpus/gold" instance=ExtResource("13_8pots")]
+position = Vector2(1633.03, 73)
 
 [node name="diamonds" type="Node2D" parent="pickpus"]
 
-[node name="RedDiamond" parent="pickpus/diamonds" instance=ExtResource("14_t7246")]
-position = Vector2(1179.07, 502)
+[node name="diamond" parent="pickpus/diamonds" instance=ExtResource("14_t7246")]
+position = Vector2(1172.04, 508)
 
 [node name="pines" type="Node2D" parent="."]
 position = Vector2(1.00432, 0)

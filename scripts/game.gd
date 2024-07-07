@@ -25,9 +25,9 @@ func new_game():
 	switch_level("level_" + str(level_index))
 	silver = 0
 	$HUD.update_silver(silver)
-	print("silver updated")
 	gold = 0
 	$HUD.update_gold(gold)
+	print("gold updated")
 	diamond = 0
 	$HUD.update_diamond(diamond)
 	$Player/CollisionShape2D.disabled = false
@@ -48,19 +48,21 @@ func game_over():
 
 
 func _on_diamond_picked():
+	print("diamond signal received")
 	diamond += 1
 	$HUD.update_diamond(diamond)
 
 
 func _on_gold_picked():
 	gold += 1
+	print("gold signal received")
 	$HUD.update_gold(gold)
 
 
 func _on_silver_picked():
 	silver += 1
-	print("signal received")
 	$HUD.update_silver(silver)
+	print("silver signal received")
 	 
 func _on_player_damaged():
 	print("player damaged!!")

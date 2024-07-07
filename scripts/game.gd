@@ -17,6 +17,8 @@ func new_game():
 	$HUD.update_diamond(diamond)
 	$Player/CollisionShape2D.disabled = false
 	$Player.life = 3
+	# $Player.start($StartPosition.position)
+	$Player.position = $StartPosition.position
 	$Player.show()
 	$Player.control = true
 	$BgMusic.play()

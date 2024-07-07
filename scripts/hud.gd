@@ -27,6 +27,7 @@ func show_damage():
 
 func _on_start_button_pressed():
 	await get_tree().create_timer(0.5).timeout
+	progress_bar.value = progress_bar.max_value
 	start_game.emit()
 	$Initials.hide()
 	$GameOver.hide()

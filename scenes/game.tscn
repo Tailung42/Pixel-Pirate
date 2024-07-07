@@ -17,7 +17,10 @@ script = ExtResource("1_jdtcb")
 [node name="level1" parent="." instance=ExtResource("3_wo3xv")]
 
 [node name="Player" parent="." instance=ExtResource("1_hsl5k")]
-position = Vector2(195, 409)
+position = Vector2(184, 392)
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(73, 478)
 
 [node name="BgMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_gwvuj")

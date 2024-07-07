@@ -73,7 +73,6 @@ scale = Vector2(0.89089, 0.995269)
 texture = ExtResource("5_ow0tm")
 
 [node name="buttonl" type="Sprite2D" parent="Initials/StartButton/button"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_4bndf")
 
 [node name="startButton" type="Button" parent="Initials/StartButton"]
@@ -286,7 +285,6 @@ scale = Vector2(0.89089, 0.995269)
 texture = ExtResource("5_ow0tm")
 
 [node name="buttonl" type="Sprite2D" parent="GameOver/StartButton/button"]
-scale = Vector2(1, 1)
 texture = ExtResource("4_4bndf")
 
 [node name="startButton" type="Button" parent="GameOver/StartButton"]

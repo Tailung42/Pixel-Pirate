@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://daye7bbgvjkpb" path="res://scenes/player.tscn" id="1_hsl5k"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_jdtcb"]
-[ext_resource type="PackedScene" uid="uid://d2dmguc4pnal2" path="res://levels/level1.tscn" id="3_wo3xv"]
+[ext_resource type="PackedScene" uid="uid://d2dmguc4pnal2" path="res://levels/level1.tscn" id="3_11tgk"]
 [ext_resource type="PackedScene" uid="uid://b2u7lf6h2icvj" path="res://scenes/hud.tscn" id="4_0hhgv"]
 [ext_resource type="AudioStream" uid="uid://4ecrrcq1j3ud" path="res://assets/sound/backgroundmusic.mp3" id="5_gwvuj"]
 
@@ -14,7 +14,7 @@ script = ExtResource("1_jdtcb")
 
 [node name="levels" type="Node2D" parent="."]
 
-[node name="level1" parent="." instance=ExtResource("3_wo3xv")]
+[node name="level1" parent="levels" instance=ExtResource("3_11tgk")]
 
 [node name="Player" parent="." instance=ExtResource("1_hsl5k")]
 position = Vector2(184, 392)
@@ -22,14 +22,17 @@ position = Vector2(184, 392)
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(73, 478)
 
+[node name="EndPosition" type="Marker2D" parent="."]
+position = Vector2(2254, 57)
+
 [node name="BgMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_gwvuj")
 volume_db = -2.311
 
 [connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]
-[connection signal="diamond_picked" from="level1" to="." method="_on_level_1_diamond_picked"]
-[connection signal="gold_picked" from="level1" to="." method="_on_level_1_gold_picked"]
-[connection signal="silver_picked" from="level1" to="." method="_on_level_1_silver_picked"]
+[connection signal="diamond_picked" from="levels/level1" to="." method="_on_diamond_picked"]
+[connection signal="gold_picked" from="levels/level1" to="." method="_on_gold_picked"]
+[connection signal="silver_picked" from="levels/level1" to="." method="_on_silver_picked"]
 [connection signal="damaged" from="Player" to="." method="_on_player_damaged"]
 [connection signal="dead" from="Player" to="." method="_on_player_dead"]
 [connection signal="finished" from="BgMusic" to="." method="_on_bg_music_finished"]

@@ -339,6 +339,12 @@ position = Vector2(1837, 579)
 [node name="Teeth" parent="dangers/enemy" instance=ExtResource("26_ion1y")]
 position = Vector2(718.001, 491)
 
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(333.435, 487)
+
+[node name="EndPosition" type="Marker2D" parent="."]
+position = Vector2(2268.76, 36)
+
 [connection signal="child_exiting_tree" from="pickpus/silver" to="." method="_on_silver_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="pickpus/gold" to="." method="_on_gold_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="pickpus/diamonds" to="." method="_on_diamonds_child_exiting_tree"]

@@ -5,11 +5,11 @@ signal  gold_picked
 signal diamond_picked
 
 
-func _on_silver_child_exiting_tree(node:Node):
+func _on_silver_picked():
 	silver_picked.emit()
 
-func _on_gold_child_exiting_tree(node:Node):
+func _on_gold_picked():
 	gold_picked.emit()
 
-func _on_diamonds_child_exiting_tree(node:Node):
+func _on_diamonds_picked():
 	diamond_picked.emit()

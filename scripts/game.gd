@@ -15,7 +15,7 @@ func _ready():
 	player.hide()
 
 func _process(delta):
-	if player.position.x > end_position.position.x:
+	if player.position.x >= end_position.position.x:
 		new_level()
 		Marker2D
 

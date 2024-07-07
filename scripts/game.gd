@@ -11,6 +11,7 @@ var current_level
 @onready var level_index = 1
 @onready var player = $Player
 @onready var end_position = $EndPosition
+@onready var start_position = $StartPosition
 func _ready():
 	player.hide()
 
@@ -22,6 +23,8 @@ func _process(delta):
 
 
 func new_game():
+	$Player.new_game()
+	$Player.position = start_position.position
 	switch_level("level_" + str(level_index))
 	silver = 0
 	$HUD.update_silver(silver)
@@ -30,11 +33,7 @@ func new_game():
 	print("gold updated")
 	diamond = 0
 	$HUD.update_diamond(diamond)
-	$Player/CollisionShape2D.disabled = false
-	$Player.life = 3
-	$Player.position = $StartPosition.position
-	$Player.show()
-	$Player.control = true
+	$HUD.progress_bar.value = $HUD.progress_bar.max_value
 	$BgMusic.play()
 
 func game_over():
@@ -48,28 +47,27 @@ func game_over():
 
 
 func _on_diamond_picked():
-	print("diamond signal received")
 	diamond += 1
 	$HUD.update_diamond(diamond)
 
 
 func _on_gold_picked():
 	gold += 1
-	print("gold signal received")
 	$HUD.update_gold(gold)
 
 
 func _on_silver_picked():
 	silver += 1
 	$HUD.update_silver(silver)
-	print("silver signal received")
 	 
 func _on_player_damaged():
-	print("player damaged!!")
+	print("damage received")
 	$HUD.show_damage()
 
 
 func _on_player_dead():
+	get_tree().create_timer(0.5).timeout
+	print("dead received")
 	game_over()
 
 

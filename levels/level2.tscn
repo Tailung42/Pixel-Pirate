@@ -321,7 +321,6 @@ position = Vector2(708.001, 522)
 [node name="spikes2" parent="dangers/spikes" instance=ExtResource("24_271rd")]
 position = Vector2(746.001, 334)
 rotation = -1.5427
-scale = Vector2(1.5, 1.5)
 
 [node name="enemy" type="Node2D" parent="dangers"]
 

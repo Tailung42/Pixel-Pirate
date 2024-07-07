@@ -57,19 +57,28 @@ func _physics_process(delta):
 			$AnimatedSprite2D.animation = "fall"
 			
 				
+		if life == 0:
+			$CollisionShape2D.disabled = true
+			$sound/dead.play()
+			print("dead sent")
+			dead.emit()
 
 
 		move_and_slide()
 		
 
 func player_damaged():
-	life -= 1
-	damaged.emit()
 	if life > 0:
+		life -= 1
 		$sound/damaged.play()
-	else:
-		$sound/dead.play()
-		await get_tree().create_timer(0.5).timeout 
-		dead.emit()
+		print("damaged sent")
+		damaged.emit()
+
+	
 
 
+func new_game():
+	self.show()
+	$CollisionShape2D.disabled = false
+	self.life = 3
+	self.control = true

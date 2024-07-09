@@ -67,11 +67,11 @@ func _physics_process(delta):
 		move_and_slide()
 		
 
-func player_damaged():
+func _on_player_damaged():
+	print("player receives damage")
 	if life > 0:
 		life -= 1
 		$sound/damaged.play()
-		print("damaged sent")
 		damaged.emit()
 
 	

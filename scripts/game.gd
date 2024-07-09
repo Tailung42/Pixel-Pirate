@@ -61,7 +61,7 @@ func _on_silver_picked():
 	$HUD.update_silver(silver)
 	 
 func _on_player_damaged():
-	print("damage received")
+	print("game receives damage")
 	$HUD.show_damage()
 
 

@@ -102,5 +102,8 @@ func switch_level(level_name):
 		current_level.connect("diamond_picked", Callable(self, "_on_diamond_picked"))
 
 func new_level():
-	level_index += 1
-	new_game()
+	if level_index < len(level_paths):
+		level_index += 1
+		new_game()
+	level_index = 1
+	game_over()

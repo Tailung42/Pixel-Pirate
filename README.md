@@ -2,21 +2,21 @@
 Welcome to Pixel Pirate, a captivating 2D platformer game inspired by the timeless classic, Super Mario. This project is my final submission for the CS50 course, blending creativity, programming skills, and game design principles to deliver an engaging gaming experience. Pixel Pirate features a charming pixel art style, challenging levels, and an adventurous pirate protagonist navigating through perilous terrains.
 
 ## Table of Contents
-[Gameplay]()
-[Controls]()
-[Enemies]()
-[Levels]()
-[Development Process]()
-[Tools and Libraries]()
-[Assets]()
-[Sound]()
-[Installation]()
-[Usage]()
-[Customization]()
-[Future Plans]()
-[Contributing]()
-[License]()
-[Acknowledgements]()
+- [Gameplay]()
+- [Controls]()
+- [Enemies]()
+- [Levels]()
+- [Development Process]()
+- [Tools and Libraries]()
+- [Assets]()
+- [Sound]()
+- [Installation]()
+- [Usage]()
+- [Customization]()
+- [Future Plans]()
+- [Contributing]()
+- [License]()
+- [Acknowledgements]()
 
 ## Gameplay
 In Pixel Pirate, you assume the role of a courageous pirate traversing through various levels filled with obstacles, enemies, and hidden treasures. Your primary objective is to navigate from the starting point to the end of each level, collecting coins and avoiding hazards along the way. The game mechanics are designed to be simple yet challenging, providing an enjoyable experience for players of all skill levels.

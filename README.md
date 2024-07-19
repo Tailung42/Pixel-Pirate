@@ -12,15 +12,10 @@ Welcome to Pixel Pirate, a captivating 2D platformer game inspired by the timele
 - [Levels](https://github.com/Tailung42/final-project#levels)
 - [Development Process](https://github.com/Tailung42/final-project#development-process)
 - [Tools and Libraries](https://github.com/Tailung42/final-project#tools-and-libraries)
-- [Assets]()
-- [Sound]()
-- [Installation]()
-- [Usage]()
-- [Customization]()
-- [Future Plans]()
-- [Contributing]()
-- [License]()
-- [Acknowledgements]()
+- [Assets](https://github.com/Tailung42/final-project#assets)
+- [Sound](https://github.com/Tailung42/final-project#sound)
+- [Contributing](https://github.com/Tailung42/final-project#contributing)
+- [Acknowledgements](https://github.com/Tailung42/final-project#acknowledgements)
 
 ## Gameplay
 In Pixel Pirate, you assume the role of a courageous pirate traversing through various levels filled with obstacles, enemies, and hidden treasures. Your primary objective is to navigate from the starting point to the end of each level, collecting coins and avoiding hazards along the way. The game mechanics are designed to be simple yet challenging, providing an enjoyable experience for players of all skill levels.

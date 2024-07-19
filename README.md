@@ -1,5 +1,8 @@
+
 # Pixel Pirate: A 2D Platformer Game
+## Video Demo: https://youtu.be/FPUf0X6yoSs
 Welcome to Pixel Pirate, a captivating 2D platformer game inspired by the timeless classic, Super Mario. This project is my final submission for the CS50 course, blending creativity, programming skills, and game design principles to deliver an engaging gaming experience. Pixel Pirate features a charming pixel art style, challenging levels, and an adventurous pirate protagonist navigating through perilous terrains.
+
 
 ## Table of Contents
 - [Gameplay]()

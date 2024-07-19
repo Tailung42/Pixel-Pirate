@@ -6,12 +6,12 @@ Welcome to Pixel Pirate, a captivating 2D platformer game inspired by the timele
 
 
 ## Table of Contents
-- [Gameplay]()
-- [Controls]()
-- [Enemies]()
-- [Levels]()
-- [Development Process]()
-- [Tools and Libraries]()
+- [Gameplay](https://github.com/Tailung42/final-project#gameplay)
+- [Controls](https://github.com/Tailung42/final-project#controls)
+- [Enemies](https://github.com/Tailung42/final-project#enemies)
+- [Levels](https://github.com/Tailung42/final-project#levels)
+- [Development Process](https://github.com/Tailung42/final-project#development-process)
+- [Tools and Libraries](https://github.com/Tailung42/final-project#tools-and-libraries)
 - [Assets]()
 - [Sound]()
 - [Installation]()
@@ -61,9 +61,13 @@ Pixel Pirate was developed using the following tools and libraries:
 godot engine
 godot documentation
 
+## Assets
+game asset by:[PixelFrog](https://pixelfrog-assets.itch.io/)
 
 ## Sound
-Sound effects and background music are essential for an immersive gaming experience. The audio elements in Pixel Pirate are sourced from Sound Source, adding auditory feedback and enhancing the atmosphere of the game.
+Sound effects and background music are essential for an immersive gaming experience. The audio elements in Pixel Pirate are sourced from [pixabay](https://pixabay.com/sound-effects/search/game/)
+
+adding auditory feedback and enhancing the atmosphere of the game.
 
 ## Contributing
 Contributions are welcome! If you have ideas for improvements or new features, feel free to fork the repository and submit a pull request. Please ensure your code follows the project’s coding standards and includes appropriate documentation.

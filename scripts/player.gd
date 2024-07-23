@@ -60,7 +60,6 @@ func _physics_process(delta):
 		if life == 0:
 			$CollisionShape2D.disabled = true
 			$sound/dead.play()
-			print("dead sent")
 			dead.emit()
 
 

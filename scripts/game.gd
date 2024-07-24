@@ -18,7 +18,6 @@ func _ready():
 func _process(delta):
 	if player.position.x >= end_position.position.x:
 		new_level()
-		Marker2D
 
 
 
@@ -105,5 +104,6 @@ func new_level():
 	if level_index < len(level_paths):
 		level_index += 1
 		new_game()
-	level_index = 1
-	game_over()
+	else:
+		level_index = 1
+		game_over()

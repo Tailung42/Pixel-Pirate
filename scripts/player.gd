@@ -1,5 +1,5 @@
 extends CharacterBody2D
-# 
+# var
 var  max_jumps = 2
 var jumps = 0
 var life = 3
@@ -57,11 +57,12 @@ func _physics_process(delta):
 			$AnimatedSprite2D.animation = "fall"
 			
 				
-		if life == 0:
-			$CollisionShape2D.disabled = true
-			$sound/dead.play()
-			dead.emit()
 
+		# if life == 0:
+		# 	# $CollisionShape2D.disabled = true
+		# 	# $sound/dead.play()
+		# 	# print("dead sent")
+		# 	# dead.emit()
 
 		move_and_slide()
 		
@@ -70,8 +71,15 @@ func _on_player_damaged():
 	print("player receives damage")
 	if life > 0:
 		life -= 1
-		$sound/damaged.play()
-		damaged.emit()
+		if life > 0:
+			$sound/damaged.play()
+			damaged.emit()
+		else:
+			$CollisionShape2D.disabled = true
+			$sound/dead.play()
+			print("dead sent")
+			damaged.emit()
+			dead.emit()
 
 	
 

@@ -24,5 +24,5 @@ func _on_body_entered(body:Node2D):
 
 		$AudioStreamPlayer.play()
 		$AnimatedSprite2D.visible = false
-		await get_tree().create_timer(0.7).timeout
+		await get_tree().create_timer(0.8).timeout
 		queue_free()
